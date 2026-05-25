@@ -1,0 +1,4189 @@
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i.return) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); } r ? i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n : (o("next", 0), o("throw", 1), o("return", 2)); }, _regeneratorDefine2(e, r, n, t); }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+// ─── UMD globals (loaded via <script> tags in index.html) ─────────────────────
+var _React = React,
+  useState = _React.useState,
+  useMemo = _React.useMemo,
+  useCallback = _React.useCallback,
+  useEffect = _React.useEffect;
+var _Recharts = Recharts,
+  AreaChart = _Recharts.AreaChart,
+  Area = _Recharts.Area,
+  BarChart = _Recharts.BarChart,
+  Bar = _Recharts.Bar,
+  ScatterChart = _Recharts.ScatterChart,
+  Scatter = _Recharts.Scatter,
+  XAxis = _Recharts.XAxis,
+  YAxis = _Recharts.YAxis,
+  CartesianGrid = _Recharts.CartesianGrid,
+  Tooltip = _Recharts.Tooltip,
+  ResponsiveContainer = _Recharts.ResponsiveContainer,
+  Cell = _Recharts.Cell,
+  ReferenceLine = _Recharts.ReferenceLine;
+var _lucide = lucide,
+  Plus = _lucide.Plus,
+  BarChart2 = _lucide.BarChart2,
+  ChevronLeft = _lucide.ChevronLeft,
+  Activity = _lucide.Activity,
+  TrendingUp = _lucide.TrendingUp,
+  TrendingDown = _lucide.TrendingDown,
+  Check = _lucide.Check,
+  FileText = _lucide.FileText,
+  Loader = _lucide.Loader,
+  Sparkles = _lucide.Sparkles,
+  Edit2 = _lucide.Edit2,
+  Trash2 = _lucide.Trash2,
+  Search = _lucide.Search,
+  Brain = _lucide.Brain,
+  ChevronRight = _lucide.ChevronRight,
+  Download = _lucide.Download,
+  RefreshCw = _lucide.RefreshCw,
+  Info = _lucide.Info,
+  AlertTriangle = _lucide.AlertTriangle,
+  Zap = _lucide.Zap,
+  X = _lucide.X;
+
+// ─── GLOBAL STYLES ────────────────────────────────────────────────────────────
+var STYLES = "\n  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap');\n  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }\n  html, body { background: #080e25; color: #fff; font-family: 'DM Sans', system-ui, sans-serif; }\n  ::-webkit-scrollbar { width: 4px; height: 4px; }\n  ::-webkit-scrollbar-track { background: transparent; }\n  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }\n  input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 8px; outline: none; cursor: pointer; }\n  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 22px; height: 22px; border-radius: 50%; background: white; border: 3px solid currentColor; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.5); transition: transform .15s; }\n  input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.15); }\n  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }\n  @keyframes slideUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }\n  @keyframes spin { to { transform: rotate(360deg); } }\n  .fade-in { animation: fadeIn .3s ease forwards; }\n  .slide-up { animation: slideUp .32s ease forwards; }\n  .spinning { animation: spin 1s linear infinite; display: inline-block; }\n";
+
+// ─── DESIGN TOKENS (navy + gold, matching screenshot) ─────────────────────────
+var C = {
+  bg: "#080e25",
+  bgDeep: "#050b1a",
+  card: "#0d1640",
+  cardAlt: "#0a1232",
+  border: "rgba(255,255,255,0.07)",
+  borderGold: "rgba(201,164,74,0.35)",
+  text: "#ffffff",
+  muted: "#7a8ba8",
+  gold: "#c9a44a",
+  goldLight: "rgba(201,164,74,0.13)",
+  goldGrad: "linear-gradient(135deg,#c9a44a,#e8c070)"
+};
+
+// pill colours for pain levels — earthy, like screenshot event pills
+var pillStyle = function pillStyle(n) {
+  return n <= 2 ? {
+    bg: "#112a1e",
+    text: "#4ecf8a"
+  } : n <= 4 ? {
+    bg: "#1a2e12",
+    text: "#84cc4a"
+  } : n <= 6 ? {
+    bg: "#2a2210",
+    text: "#c9a44a"
+  } : n <= 8 ? {
+    bg: "#2a1510",
+    text: "#d4805a"
+  } : {
+    bg: "#2a1018",
+    text: "#e06070"
+  };
+};
+
+// ─── CONSTANTS ────────────────────────────────────────────────────────────────
+var SYMPTOMS = [
+// General pain types
+"Aching", "Burning", "Stabbing", "Throbbing", "Pressure", "Cramping", "Stiffness", "Swelling",
+// Nerve-specific sensory
+"Tingling", "Pins & needles (paraesthesia)", "Numbness", "Loss of sensation", "Electric shock sensation", "Shooting pain", "Radiating pain", "Hypersensitivity (allodynia)", "Temperature abnormality (hot/cold)",
+// Nerve-specific motor / functional
+"Weakness", "Muscle twitching (fasciculations)", "Muscle spasms", "Loss of grip / dropping objects", "Foot drop / leg dragging", "Loss of coordination / ataxia", "Loss of balance (proprioception)", "Heaviness in limbs", "Restless legs / restless sensation",
+// Systemic
+"Fatigue", "Nausea", "Dizziness"];
+var TRIGGERS = [
+// Lifestyle
+"Stress", "Poor Sleep", "Dehydration", "Alcohol", "Food / Diet", "Hormonal",
+// Physical
+"Physical Activity", "Prolonged Sitting", "Prolonged Standing", "Poor Posture / Slouching", "Prolonged Computer / Screen Use", "Repetitive Movements", "Lifting / Heavy Load",
+// Environmental
+"Weather Change", "Cold Exposure", "Damp / Humidity",
+// Nerve-specific
+"Pressure on Nerve Area", "Head / Neck Position", "Sustained Neck Flexion", "Carrying Weight on Shoulder", "Tight Clothing / Compression"];
+var MEDS = ["Ibuprofen 400mg", "Paracetamol 500mg", "Naproxen 500mg", "Codeine", "Amitriptyline", "Gabapentin", "Tramadol", "Aspirin", "Diclofenac", "Topical NSAID", "Heat pack", "Ice pack"];
+var MOOD_EMO = ["😣", "😟", "😐", "🙂", "😄"];
+
+// ─── HIERARCHICAL BODY MAP ────────────────────────────────────────────────────
+// Structured as a health practitioner would assess — region → specific area
+var BODY_MAP = {
+  "Head": ["Forehead", "Crown (top of head)", "Right temple", "Left temple", "Both temples", "Base of skull / occiput", "Right side of scalp", "Left side of scalp", "Behind right eye", "Behind left eye", "Behind both eyes", "Right cheekbone / sinus", "Left cheekbone / sinus", "Front sinuses (bridge of nose)", "Right jaw / TMJ", "Left jaw / TMJ", "Ear (right)", "Ear (left)", "Whole head"],
+  "Face": ["Forehead (facial)", "Right cheek", "Left cheek", "Nose / nasal bridge", "Upper lip / philtrum", "Chin / mandible", "Right side of face", "Left side of face", "Around right eye (periorbital)", "Around left eye (periorbital)", "Whole face"],
+  "Neck": ["Front of neck / throat", "Back of neck (nape)", "Right side of neck", "Left side of neck", "Right cervical spine (C1–C7)", "Left cervical spine (C1–C7)", "Base of neck (cervicothoracic junction)", "Whole neck"],
+  "Shoulders": ["Right shoulder — front (anterior)", "Right shoulder — top (AC joint)", "Right shoulder — back (posterior)", "Right rotator cuff / deep joint", "Left shoulder — front (anterior)", "Left shoulder — top (AC joint)", "Left shoulder — back (posterior)", "Left rotator cuff / deep joint", "Both shoulders"],
+  "Upper Back": ["Upper right (thoracic T1–T6)", "Upper left (thoracic T1–T6)", "Between shoulder blades (interscapular)", "Right of thoracic spine", "Left of thoracic spine", "Mid thoracic spine (T7–T12)", "Right mid-back", "Left mid-back", "Across whole upper back"],
+  "Lower Back": ["Right lumbar (L1–L3)", "Left lumbar (L1–L3)", "Centre lumbar spine (L1–L5)", "Right SI joint (sacroiliac)", "Left SI joint (sacroiliac)", "Sacrum (central base of spine)", "Coccyx / tailbone", "Right lower back with radiation to leg", "Left lower back with radiation to leg", "Across whole lower back"],
+  "Chest": ["Centre / sternum (breastbone)", "Left chest (cardiac area)", "Right chest", "Upper chest / clavicle area", "Lower chest", "Left ribs (lateral)", "Right ribs (lateral)", "Under left ribs", "Under right ribs", "Whole chest"],
+  "Abdomen": ["Upper right quadrant (liver / gallbladder)", "Upper left quadrant (stomach / spleen)", "Upper centre / epigastric (stomach area)", "Navel / periumbilical (central)", "Lower right quadrant (appendix / ovary)", "Lower left quadrant (sigmoid colon / ovary)", "Lower centre (bladder / uterus / pubic)", "Right flank (kidney / ureter)", "Left flank (kidney / ureter)", "Whole abdomen", "Diffuse / generalised"],
+  "Pelvis & Groin": ["Centre pelvis", "Right groin / inguinal", "Left groin / inguinal", "Right buttock / gluteal", "Left buttock / gluteal", "Both buttocks", "Perineum / pelvic floor", "Right hip flexor (anterior)", "Left hip flexor (anterior)", "Coccyx / tailbone", "Pubic symphysis"],
+  "Hips": ["Right hip — front / groin (anterior)", "Right hip — side / greater trochanter (lateral)", "Right hip — back / gluteal (posterior)", "Right hip — deep joint (intracapsular)", "Left hip — front / groin (anterior)", "Left hip — side / greater trochanter (lateral)", "Left hip — back / gluteal (posterior)", "Left hip — deep joint (intracapsular)", "Both hips"],
+  "Arms": ["Right upper arm — front (bicep)", "Right upper arm — back (tricep)", "Right elbow — front (antecubital)", "Right elbow — outer (lateral epicondyle / tennis elbow)", "Right elbow — inner (medial epicondyle / golfer's elbow)", "Right elbow — back (olecranon)", "Right forearm — front (flexor side)", "Right forearm — back (extensor side)", "Right wrist — front", "Right wrist — back", "Right wrist — thumb side (radial)", "Right wrist — little finger side (ulnar)", "Left upper arm — front (bicep)", "Left upper arm — back (tricep)", "Left elbow — front (antecubital)", "Left elbow — outer (lateral epicondyle / tennis elbow)", "Left elbow — inner (medial epicondyle / golfer's elbow)", "Left elbow — back (olecranon)", "Left forearm — front (flexor side)", "Left forearm — back (extensor side)", "Left wrist — front", "Left wrist — back", "Left wrist — thumb side (radial)", "Left wrist — little finger side (ulnar)", "Both upper arms", "Both elbows", "Both forearms", "Both wrists"],
+  "Hands & Fingers": ["Right palm", "Right back of hand (dorsum)", "Right thumb", "Right index finger", "Right middle finger", "Right ring finger", "Right little finger", "Right fingers (multiple)", "Right whole hand", "Left palm", "Left back of hand (dorsum)", "Left thumb", "Left index finger", "Left middle finger", "Left ring finger", "Left little finger", "Left fingers (multiple)", "Left whole hand", "Both hands"],
+  "Knees": ["Right knee — front / kneecap (patella)", "Right knee — just below kneecap (patellar tendon)", "Right knee — inner (medial collateral / meniscus)", "Right knee — outer (lateral collateral / IT band)", "Right knee — back (popliteal fossa)", "Right knee — whole joint", "Left knee — front / kneecap (patella)", "Left knee — just below kneecap (patellar tendon)", "Left knee — inner (medial collateral / meniscus)", "Left knee — outer (lateral collateral / IT band)", "Left knee — back (popliteal fossa)", "Left knee — whole joint", "Both knees"],
+  "Legs": ["Right thigh — front (quadriceps)", "Right thigh — back (hamstring)", "Right thigh — inner (adductor / groin)", "Right thigh — outer (IT band / TFL)", "Right shin / tibia (front lower leg)", "Right calf (gastrocnemius / soleus)", "Right Achilles tendon", "Right ankle — inner (medial malleolus)", "Right ankle — outer (lateral malleolus)", "Right ankle — front", "Left thigh — front (quadriceps)", "Left thigh — back (hamstring)", "Left thigh — inner (adductor / groin)", "Left thigh — outer (IT band / TFL)", "Left shin / tibia (front lower leg)", "Left calf (gastrocnemius / soleus)", "Left Achilles tendon", "Left ankle — inner (medial malleolus)", "Left ankle — outer (lateral malleolus)", "Left ankle — front", "Both thighs", "Both shins", "Both calves", "Both ankles"],
+  "Feet & Toes": ["Right heel (calcaneus)", "Right arch — inner (plantar fascia)", "Right arch — outer (lateral border)", "Right ball of foot (metatarsal heads)", "Right top of foot (dorsum)", "Right big toe (hallux)", "Right 2nd / 3rd toe", "Right 4th / 5th (little) toe", "Right all toes", "Right whole foot", "Left heel (calcaneus)", "Left arch — inner (plantar fascia)", "Left arch — outer (lateral border)", "Left ball of foot (metatarsal heads)", "Left top of foot (dorsum)", "Left big toe (hallux)", "Left 2nd / 3rd toe", "Left 4th / 5th (little) toe", "Left all toes", "Left whole foot", "Both heels", "Both feet"],
+  "Spinal Cord & Nerve Roots": [
+  // Cervical (neck) — feeds arms, hands, diaphragm
+  "C1–C2 (upper cervical — head / neck)", "C3–C4 (mid cervical — neck / shoulder)", "C5 nerve root (shoulder / upper arm)", "C6 nerve root (thumb / index finger / radial forearm)", "C7 nerve root (middle finger / tricep / wrist)", "C8 nerve root (ring & little finger / ulnar forearm)", "T1 nerve root (inner forearm / intrinsic hand muscles)",
+  // Thoracic — chest / abdomen wall
+  "T2–T6 (upper thoracic — chest / intercostal)", "T7–T12 (lower thoracic — abdomen / flank)",
+  // Lumbar — feeds legs
+  "L1–L2 nerve root (groin / upper inner thigh)", "L3 nerve root (front thigh / knee cap area)", "L4 nerve root (inner shin / big toe — femoral nerve)", "L5 nerve root (outer shin / top of foot / big toe)", "S1 nerve root (outer foot / sole / little toe / calf)", "S2–S4 (sacral — inner thigh / bladder / bowel / perineum)",
+  // Cord levels
+  "Cervical spinal cord (C1–T1)", "Thoracic spinal cord (T1–T12)", "Lumbar spinal cord / conus medullaris", "Cauda equina (nerve roots below L1)"],
+  "Peripheral Nerve Pathways": [
+  // Upper limb nerves
+  "Right median nerve (thumb → index/middle → wrist → elbow → shoulder)", "Left median nerve", "Right ulnar nerve (ring/little finger → inner elbow → shoulder)", "Left ulnar nerve", "Right radial nerve (back of hand → outer elbow → upper arm)", "Left radial nerve", "Brachial plexus — right (neck → shoulder → whole arm)", "Brachial plexus — left",
+  // Lower limb nerves
+  "Right sciatic nerve (lower back → buttock → back of thigh → leg → foot)", "Left sciatic nerve", "Right femoral nerve (lumbar → front thigh → inner knee/shin)", "Left femoral nerve", "Right common peroneal nerve (outer knee → shin → top of foot)", "Left common peroneal nerve", "Right tibial nerve (back of knee → calf → sole of foot)", "Left tibial nerve", "Right sural nerve (outer calf → outer foot/heel)", "Left sural nerve", "Right saphenous nerve (inner knee → inner shin → inner ankle)", "Left saphenous nerve",
+  // Head / cranial
+  "Trigeminal nerve — right (face / forehead / jaw)", "Trigeminal nerve — left", "Occipital nerve — right (back of scalp)", "Occipital nerve — left", "Greater occipital nerve (base of skull → top of head)",
+  // Autonomic / diffuse
+  "Diffuse peripheral neuropathy (both hands)", "Diffuse peripheral neuropathy (both feet)", "Diffuse peripheral neuropathy (both hands & feet — glove & stocking)"]
+};
+var getPainColor = function getPainColor(n) {
+  return n <= 2 ? "#4ecf8a" : n <= 4 ? "#84cc4a" : n <= 6 ? "#c9a44a" : n <= 8 ? "#d4805a" : "#e06070";
+};
+var getPainLabel = function getPainLabel(n) {
+  return n === 0 ? "None" : n <= 2 ? "Mild" : n <= 4 ? "Moderate" : n <= 6 ? "Noticeable" : n <= 8 ? "Severe" : "Extreme";
+};
+var fmt = function fmt(iso, f) {
+  var d = new Date(iso);
+  if (f === "short") return d.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "short"
+  });
+  if (f === "long") return d.toLocaleDateString("en-GB", {
+    weekday: "long",
+    day: "numeric",
+    month: "long"
+  });
+  if (f === "time") return d.toLocaleTimeString("en-GB", {
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+  if (f === "chart") return d.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "short"
+  });
+  return d.toLocaleDateString();
+};
+var relDate = function relDate(iso) {
+  var d = new Date(iso),
+    t = new Date(),
+    y = new Date(t);
+  y.setDate(t.getDate() - 1);
+  if (d.toDateString() === t.toDateString()) return "Today";
+  if (d.toDateString() === y.toDateString()) return "Yesterday";
+  return fmt(iso, "short");
+};
+
+// ─── SAMPLE DATA ──────────────────────────────────────────────────────────────
+function genData() {
+  var out = [],
+    now = new Date();
+  for (var ago = 59; ago >= 0; ago--) {
+    if (ago > 0 && Math.random() < 0.22) continue;
+    var date = new Date(now);
+    date.setDate(now.getDate() - ago);
+    var sleep = Math.min(9, Math.max(3.5, 6.3 + Math.sin(ago * 0.71) * 1.4 + (Math.random() - 0.5) * 1.8));
+    var stress = Math.random() < 0.2;
+    var improve = (60 - ago) / 60 * 1.8;
+    var raw = 6.8 - improve + (sleep < 6 ? (6 - sleep) * 1.1 : 0) + (stress ? 1.8 : 0) + (Math.random() - 0.5) * 1.4;
+    var pain = Math.round(Math.min(10, Math.max(1, raw)));
+    var syms = [pain > 5 ? "Aching" : "Stiffness"];
+    if (pain > 4) syms.push(["Throbbing", "Fatigue", "Burning"][Math.floor(Math.random() * 3)]);
+    if (pain > 7) syms.push("Weakness");
+    var locs = ["Lower Back"];
+    if (pain > 5) locs.push("Hips");
+    if (Math.random() < 0.25) locs.push("Neck");
+    var trigs = [];
+    if (sleep < 6) trigs.push("Poor Sleep");
+    if (stress) trigs.push("Stress");
+    if (Math.random() < 0.12) trigs.push("Physical Activity");
+    out.push({
+      id: "e".concat(ago, "-").concat(Math.random().toString(36).slice(2, 5)),
+      loggedAt: date.toISOString(),
+      painLevel: pain,
+      locations: locs,
+      symptoms: syms,
+      durationMinutes: [60, 90, 120, 180, 240][Math.floor(Math.random() * 5)],
+      notes: pain >= 8 ? "Very difficult day — had to rest." : pain <= 2 ? "Feeling better today." : "",
+      triggers: trigs,
+      mood: Math.max(1, Math.min(5, Math.round(5 - pain * 0.38 + Math.random() * 0.8))),
+      energyLevel: Math.max(1, Math.min(5, Math.round(5 - pain * 0.32 + sleep * 0.12))),
+      sleepHours: Math.round(sleep * 2) / 2,
+      medications: pain >= 7 ? ["Ibuprofen 400mg"] : []
+    });
+  }
+  return out.sort(function (a, b) {
+    return new Date(b.loggedAt) - new Date(a.loggedAt);
+  });
+}
+var INIT_DATA = genData();
+
+// ─── CSV EXPORT ───────────────────────────────────────────────────────────────
+function exportCSV(entries) {
+  var cols = ["Date", "Time", "Pain", "Locations", "Symptoms", "Duration(min)", "Triggers", "Mood", "Energy", "Sleep(h)", "Notes"];
+  var rows = entries.map(function (e) {
+    return [fmt(e.loggedAt, "short"), fmt(e.loggedAt, "time"), e.painLevel, e.locations.join("|"), e.symptoms.join("|"), e.durationMinutes || "", e.triggers.join("|"), e.mood || "", e.energyLevel || "", e.sleepHours || "", (e.notes || "").replace(/,/g, " ")];
+  });
+  var csv = [cols].concat(_toConsumableArray(rows)).map(function (r) {
+    return r.join(",");
+  }).join("\n");
+  var a = document.createElement("a");
+  a.href = "data:text/csv;charset=utf-8," + encodeURIComponent(csv);
+  a.download = "painlog-".concat(new Date().toISOString().slice(0, 10), ".csv");
+  a.click();
+}
+
+// ─── SHARED UI COMPONENTS ─────────────────────────────────────────────────────
+function NavyCard(_ref) {
+  var children = _ref.children,
+    _ref$style = _ref.style,
+    style = _ref$style === void 0 ? {} : _ref$style;
+  return /*#__PURE__*/React.createElement("div", {
+    style: _objectSpread({
+      background: C.card,
+      borderRadius: 14,
+      border: "1px solid ".concat(C.border)
+    }, style)
+  }, children);
+}
+function SectionLabel(_ref2) {
+  var children = _ref2.children;
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 8,
+      margin: "1.1rem 0 0.55rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 3,
+      height: 14,
+      background: C.gold,
+      borderRadius: 2
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.67rem",
+      fontWeight: 600,
+      letterSpacing: "0.12em",
+      textTransform: "uppercase",
+      color: C.muted
+    }
+  }, children));
+}
+function GoldChip(_ref3) {
+  var label = _ref3.label,
+    selected = _ref3.selected,
+    onClick = _ref3.onClick,
+    color = _ref3.color;
+  var ac = color || C.gold;
+  return /*#__PURE__*/React.createElement("button", {
+    onClick: onClick,
+    style: {
+      padding: "5px 13px",
+      borderRadius: 99,
+      fontFamily: "inherit",
+      fontSize: "0.78rem",
+      fontWeight: 500,
+      cursor: "pointer",
+      transition: "all .15s",
+      whiteSpace: "nowrap",
+      border: "1.5px solid ".concat(selected ? ac : "rgba(255,255,255,0.13)"),
+      background: selected ? "".concat(ac, "22") : "transparent",
+      color: selected ? ac : "rgba(255,255,255,0.5)"
+    }
+  }, label);
+}
+
+// ─── LOCATION PICKER ─────────────────────────────────────────────────────────
+// Two-level hierarchical picker: region → specific clinical sub-location
+function LocationPicker(_ref4) {
+  var selected = _ref4.selected,
+    onChange = _ref4.onChange;
+  var _useState = useState(null),
+    _useState2 = _slicedToArray(_useState, 2),
+    expanded = _useState2[0],
+    setExpanded = _useState2[1];
+  var regions = Object.keys(BODY_MAP);
+
+  // Count selected sub-locations for a given region
+  var countFor = function countFor(r) {
+    return selected.filter(function (l) {
+      return l.startsWith(r + " · ");
+    }).length;
+  };
+  var toggleSub = function toggleSub(region, sub) {
+    var key = "".concat(region, " \xB7 ").concat(sub);
+    onChange(selected.includes(key) ? selected.filter(function (s) {
+      return s !== key;
+    }) : [].concat(_toConsumableArray(selected), [key]));
+  };
+  var removeOne = function removeOne(loc) {
+    return onChange(selected.filter(function (s) {
+      return s !== loc;
+    }));
+  };
+
+  // Shorten the display label for tags — drop the region prefix for brevity
+  var tagLabel = function tagLabel(loc) {
+    var parts = loc.split(" · ");
+    return parts.length === 2 ? parts[1] : loc;
+  };
+  var tagRegion = function tagRegion(loc) {
+    var parts = loc.split(" · ");
+    return parts.length === 2 ? parts[0] : "";
+  };
+  return /*#__PURE__*/React.createElement("div", null, selected.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexWrap: "wrap",
+      gap: 5,
+      marginBottom: "0.9rem",
+      padding: "10px 12px",
+      background: C.bgDeep,
+      borderRadius: 10,
+      border: "1px solid ".concat(C.borderGold)
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: "100%",
+      fontSize: "0.65rem",
+      color: C.gold,
+      fontWeight: 600,
+      letterSpacing: "0.08em",
+      textTransform: "uppercase",
+      marginBottom: 4
+    }
+  }, "Selected locations"), selected.map(function (loc) {
+    return /*#__PURE__*/React.createElement("div", {
+      key: loc,
+      style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 3,
+        padding: "3px 6px 3px 10px",
+        borderRadius: 99,
+        background: C.goldLight,
+        border: "1px solid ".concat(C.borderGold)
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.67rem",
+        color: C.muted,
+        marginRight: 2
+      }
+    }, tagRegion(loc)), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.72rem",
+        color: C.gold,
+        fontWeight: 500
+      }
+    }, tagLabel(loc)), /*#__PURE__*/React.createElement("button", {
+      onClick: function onClick() {
+        return removeOne(loc);
+      },
+      style: {
+        background: "none",
+        border: "none",
+        cursor: "pointer",
+        color: C.muted,
+        padding: "0 2px",
+        display: "flex",
+        alignItems: "center",
+        lineHeight: 1
+      }
+    }, /*#__PURE__*/React.createElement(X, {
+      size: 10
+    })));
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "repeat(3, 1fr)",
+      gap: 6
+    }
+  }, regions.map(function (region) {
+    var count = countFor(region);
+    var isOpen = expanded === region;
+    return /*#__PURE__*/React.createElement("button", {
+      key: region,
+      onClick: function onClick() {
+        return setExpanded(isOpen ? null : region);
+      },
+      style: {
+        padding: "9px 6px",
+        borderRadius: 10,
+        fontFamily: "inherit",
+        fontSize: "0.75rem",
+        fontWeight: isOpen || count > 0 ? 600 : 400,
+        cursor: "pointer",
+        transition: "all .15s",
+        textAlign: "center",
+        position: "relative",
+        border: "1.5px solid ".concat(isOpen ? C.gold : count > 0 ? C.borderGold : C.border),
+        background: isOpen ? C.goldLight : count > 0 ? "rgba(201,164,74,0.07)" : "transparent",
+        color: isOpen ? C.gold : count > 0 ? C.gold : "rgba(255,255,255,0.5)"
+      }
+    }, region, count > 0 && /*#__PURE__*/React.createElement("span", {
+      style: {
+        position: "absolute",
+        top: -7,
+        right: -7,
+        width: 18,
+        height: 18,
+        borderRadius: "50%",
+        background: C.gold,
+        color: "#080e25",
+        fontSize: "0.6rem",
+        fontWeight: 700,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        boxShadow: "0 0 0 2px #080e25"
+      }
+    }, count));
+  })), expanded && /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: "0.75rem",
+      padding: "1rem",
+      background: C.bgDeep,
+      borderRadius: 12,
+      border: "1px solid ".concat(C.borderGold)
+    },
+    className: "fade-in"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      marginBottom: "0.6rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.7rem",
+      color: C.gold,
+      fontWeight: 700,
+      textTransform: "uppercase",
+      letterSpacing: "0.1em"
+    }
+  }, expanded, " \u2014 select specific area"), countFor(expanded) > 0 && /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return onChange(selected.filter(function (s) {
+        return !s.startsWith(expanded + " · ");
+      }));
+    },
+    style: {
+      fontSize: "0.67rem",
+      color: "#e06070",
+      background: "none",
+      border: "none",
+      cursor: "pointer",
+      fontFamily: "inherit"
+    }
+  }, "Clear ", expanded)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexWrap: "wrap",
+      gap: 5
+    }
+  }, BODY_MAP[expanded].map(function (sub) {
+    var key = "".concat(expanded, " \xB7 ").concat(sub);
+    var isSel = selected.includes(key);
+    return /*#__PURE__*/React.createElement("button", {
+      key: sub,
+      onClick: function onClick() {
+        return toggleSub(expanded, sub);
+      },
+      style: {
+        padding: "5px 11px",
+        borderRadius: 99,
+        fontFamily: "inherit",
+        fontSize: "0.75rem",
+        fontWeight: isSel ? 600 : 400,
+        cursor: "pointer",
+        transition: "all .15s",
+        whiteSpace: "nowrap",
+        border: "1.5px solid ".concat(isSel ? C.gold : "rgba(255,255,255,0.13)"),
+        background: isSel ? C.goldLight : "rgba(255,255,255,0.03)",
+        color: isSel ? C.gold : "rgba(255,255,255,0.55)"
+      }
+    }, isSel && /*#__PURE__*/React.createElement("span", {
+      style: {
+        marginRight: 4
+      }
+    }, "\u2713"), sub);
+  }))), selected.length === 0 && /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.75rem",
+      color: "#e06070",
+      marginTop: 8
+    }
+  }, "Select at least one location."));
+}
+function GoldBtn(_ref5) {
+  var children = _ref5.children,
+    onClick = _ref5.onClick,
+    disabled = _ref5.disabled,
+    _ref5$style = _ref5.style,
+    style = _ref5$style === void 0 ? {} : _ref5$style;
+  return /*#__PURE__*/React.createElement("button", {
+    onClick: onClick,
+    disabled: disabled,
+    style: _objectSpread({
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 6,
+      padding: "10px 20px",
+      borderRadius: 10,
+      border: "none",
+      fontFamily: "inherit",
+      fontSize: "0.88rem",
+      fontWeight: 600,
+      cursor: disabled ? "not-allowed" : "pointer",
+      background: disabled ? "rgba(201,164,74,0.25)" : C.goldGrad,
+      color: disabled ? "rgba(255,255,255,0.3)" : "#080e25",
+      transition: "all .15s"
+    }, style)
+  }, children);
+}
+function OutlineBtn(_ref6) {
+  var children = _ref6.children,
+    onClick = _ref6.onClick,
+    _ref6$style = _ref6.style,
+    style = _ref6$style === void 0 ? {} : _ref6$style;
+  return /*#__PURE__*/React.createElement("button", {
+    onClick: onClick,
+    style: _objectSpread({
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 6,
+      padding: "9px 16px",
+      borderRadius: 10,
+      fontFamily: "inherit",
+      fontSize: "0.85rem",
+      fontWeight: 500,
+      cursor: "pointer",
+      transition: "all .15s",
+      border: "1.5px solid rgba(255,255,255,0.14)",
+      background: "transparent",
+      color: C.muted
+    }, style)
+  }, children);
+}
+function ChartTip(_ref7) {
+  var active = _ref7.active,
+    payload = _ref7.payload,
+    label = _ref7.label;
+  if (!active || !(payload !== null && payload !== void 0 && payload.length)) return null;
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.card,
+      border: "1px solid ".concat(C.border),
+      borderRadius: 10,
+      padding: "10px 14px",
+      boxShadow: "0 8px 30px rgba(0,0,0,0.5)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.7rem",
+      color: C.muted,
+      marginBottom: 4
+    }
+  }, label), payload.map(function (p, i) {
+    return /*#__PURE__*/React.createElement("div", {
+      key: i,
+      style: {
+        fontSize: "0.84rem",
+        color: p.color || C.text,
+        fontWeight: 600
+      }
+    }, p.name, ": ", typeof p.value === "number" ? p.value.toFixed(1) : p.value);
+  }));
+}
+
+// ─── PAIN SLIDER ──────────────────────────────────────────────────────────────
+function PainSlider(_ref8) {
+  var value = _ref8.value,
+    _onChange = _ref8.onChange;
+  var col = getPainColor(value);
+  var grad = "linear-gradient(90deg,#4ecf8a 0%,#c9a44a 55%,#d4805a 78%,#e06070 100%)";
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "flex-end",
+      marginBottom: 10
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Cormorant Garamond',serif",
+      fontSize: "4.5rem",
+      fontWeight: 600,
+      color: col,
+      lineHeight: 1,
+      transition: "color .2s"
+    }
+  }, value), /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: "right",
+      marginBottom: 8
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "1rem",
+      fontWeight: 600,
+      color: col
+    }
+  }, getPainLabel(value)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.muted
+    }
+  }, "out of 10"))), /*#__PURE__*/React.createElement("input", {
+    type: "range",
+    min: 0,
+    max: 10,
+    value: value,
+    onChange: function onChange(e) {
+      return _onChange(Number(e.target.value));
+    },
+    style: {
+      background: grad,
+      color: col
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      fontSize: "0.67rem",
+      color: C.muted,
+      marginTop: 6
+    }
+  }, /*#__PURE__*/React.createElement("span", null, "No pain"), /*#__PURE__*/React.createElement("span", null, "Moderate"), /*#__PURE__*/React.createElement("span", null, "Severe"), /*#__PURE__*/React.createElement("span", null, "Extreme")));
+}
+
+// ─── LOG ENTRY SCREEN ─────────────────────────────────────────────────────────
+function LogEntry(_ref9) {
+  var onSave = _ref9.onSave,
+    onBack = _ref9.onBack,
+    editEntry = _ref9.editEntry;
+  var blank = {
+    loggedAt: new Date().toISOString(),
+    painLevel: 5,
+    locations: [],
+    symptoms: [],
+    durationMinutes: 60,
+    notes: "",
+    triggers: [],
+    mood: 3,
+    energyLevel: 3,
+    sleepHours: 7,
+    medications: []
+  };
+  var _useState3 = useState(editEntry || blank),
+    _useState4 = _slicedToArray(_useState3, 2),
+    form = _useState4[0],
+    setForm = _useState4[1];
+  var _useState5 = useState(0),
+    _useState6 = _slicedToArray(_useState5, 2),
+    step = _useState6[0],
+    setStep = _useState6[1];
+  var _useState7 = useState(false),
+    _useState8 = _slicedToArray(_useState7, 2),
+    saving = _useState8[0],
+    setSaving = _useState8[1];
+  var set = function set(k, v) {
+    return setForm(function (p) {
+      return _objectSpread(_objectSpread({}, p), {}, _defineProperty({}, k, v));
+    });
+  };
+  var tog = function tog(k, v) {
+    return set(k, form[k].includes(v) ? form[k].filter(function (x) {
+      return x !== v;
+    }) : [].concat(_toConsumableArray(form[k]), [v]));
+  };
+  var save = function save() {
+    setSaving(true);
+    setTimeout(function () {
+      setSaving(false);
+      onSave(_objectSpread(_objectSpread({}, form), {}, {
+        id: (editEntry === null || editEntry === void 0 ? void 0 : editEntry.id) || "e".concat(Date.now())
+      }));
+    }, 600);
+  };
+  var steps = ["Pain Level", "Location & Symptoms", "Details"];
+  var canNext = [true, form.locations.length > 0 && form.symptoms.length > 0, true];
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: 560,
+      margin: "0 auto"
+    },
+    className: "fade-in"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 12,
+      marginBottom: "1.5rem"
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: onBack,
+    style: {
+      background: C.cardAlt,
+      border: "1px solid ".concat(C.border),
+      borderRadius: 10,
+      width: 38,
+      height: 38,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      cursor: "pointer",
+      color: C.muted
+    }
+  }, /*#__PURE__*/React.createElement(ChevronLeft, {
+    size: 18
+  })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "'Cormorant Garamond',serif",
+      fontSize: "1.5rem",
+      color: C.text
+    }
+  }, editEntry ? "Edit Entry" : "New Entry"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.muted
+    }
+  }, fmt(form.loggedAt, "long")))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 6,
+      marginBottom: "1.5rem"
+    }
+  }, steps.map(function (s, i) {
+    return /*#__PURE__*/React.createElement("div", {
+      key: i,
+      style: {
+        flex: 1
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        height: 3,
+        borderRadius: 3,
+        background: i <= step ? C.gold : C.border,
+        transition: "background .3s"
+      }
+    }), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "0.64rem",
+        color: i === step ? C.gold : C.muted,
+        marginTop: 4,
+        textAlign: "center",
+        fontWeight: i === step ? 600 : 400
+      }
+    }, s));
+  })), step === 0 && /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1.5rem",
+      marginBottom: "1rem"
+    },
+    className: "slide-up"
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "How is your pain right now?"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: "0.75rem 0 1rem"
+    }
+  }, /*#__PURE__*/React.createElement(PainSlider, {
+    value: form.painLevel,
+    onChange: function onChange(v) {
+      return set("painLevel", v);
+    }
+  })), /*#__PURE__*/React.createElement(SectionLabel, null, "When did this start?"), /*#__PURE__*/React.createElement("input", {
+    type: "datetime-local",
+    value: form.loggedAt.slice(0, 16),
+    onChange: function onChange(e) {
+      return set("loggedAt", new Date(e.target.value).toISOString());
+    },
+    style: {
+      width: "100%",
+      padding: "10px 12px",
+      borderRadius: 10,
+      border: "1px solid ".concat(C.border),
+      background: C.bgDeep,
+      color: C.text,
+      fontFamily: "inherit",
+      fontSize: "0.88rem",
+      outline: "none"
+    }
+  })), step === 1 && /*#__PURE__*/React.createElement("div", {
+    className: "slide-up"
+  }, /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1.25rem",
+      marginBottom: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "Where do you feel it?"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: 8
+    }
+  }, /*#__PURE__*/React.createElement(LocationPicker, {
+    selected: form.locations,
+    onChange: function onChange(v) {
+      return set("locations", v);
+    }
+  }))), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1.25rem"
+    }
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "What does it feel like?"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexWrap: "wrap",
+      gap: 6,
+      marginTop: 4
+    }
+  }, SYMPTOMS.map(function (s) {
+    return /*#__PURE__*/React.createElement(GoldChip, {
+      key: s,
+      label: s,
+      selected: form.symptoms.includes(s),
+      onClick: function onClick() {
+        return tog("symptoms", s);
+      }
+    });
+  })), form.symptoms.length === 0 && /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.75rem",
+      color: "#e06070",
+      marginTop: 8
+    }
+  }, "Select at least one symptom."))), step === 2 && /*#__PURE__*/React.createElement("div", {
+    className: "slide-up"
+  }, /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1.25rem",
+      marginBottom: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "Duration"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 6,
+      flexWrap: "wrap",
+      marginTop: 4
+    }
+  }, [15, 30, 60, 90, 120, 180, 240, 480].map(function (m) {
+    return /*#__PURE__*/React.createElement(GoldChip, {
+      key: m,
+      label: m < 60 ? "".concat(m, "m") : "".concat(m / 60, "h"),
+      selected: form.durationMinutes === m,
+      onClick: function onClick() {
+        return set("durationMinutes", m);
+      }
+    });
+  }))), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1.25rem",
+      marginBottom: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "Possible Triggers"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexWrap: "wrap",
+      gap: 6,
+      marginTop: 4
+    }
+  }, TRIGGERS.map(function (t) {
+    return /*#__PURE__*/React.createElement(GoldChip, {
+      key: t,
+      label: t,
+      selected: form.triggers.includes(t),
+      onClick: function onClick() {
+        return tog("triggers", t);
+      },
+      color: "#d4805a"
+    });
+  }))), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1.25rem",
+      marginBottom: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "Overall Wellbeing"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr 1fr",
+      gap: "1rem",
+      marginTop: 8
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.muted,
+      marginBottom: 6
+    }
+  }, "Mood"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 3
+    }
+  }, MOOD_EMO.map(function (e, i) {
+    return /*#__PURE__*/React.createElement("button", {
+      key: i,
+      onClick: function onClick() {
+        return set("mood", i + 1);
+      },
+      style: {
+        fontSize: "1.3rem",
+        borderRadius: 8,
+        cursor: "pointer",
+        padding: "3px 5px",
+        background: form.mood === i + 1 ? C.goldLight : "transparent",
+        border: "1px solid ".concat(form.mood === i + 1 ? C.gold : "transparent"),
+        transition: "all .15s"
+      }
+    }, e);
+  }))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.muted,
+      marginBottom: 6
+    }
+  }, "Energy"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 3
+    }
+  }, [1, 2, 3, 4, 5].map(function (n) {
+    return /*#__PURE__*/React.createElement("button", {
+      key: n,
+      onClick: function onClick() {
+        return set("energyLevel", n);
+      },
+      style: {
+        width: 26,
+        height: 26,
+        borderRadius: 6,
+        border: "none",
+        cursor: "pointer",
+        background: form.energyLevel >= n ? C.gold : C.border,
+        color: form.energyLevel >= n ? "#080e25" : C.muted,
+        fontSize: "0.68rem",
+        fontFamily: "inherit",
+        fontWeight: 600
+      }
+    }, n);
+  }))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.muted,
+      marginBottom: 6
+    }
+  }, "Sleep (hrs)"), /*#__PURE__*/React.createElement("input", {
+    type: "number",
+    min: "0",
+    max: "12",
+    step: "0.5",
+    value: form.sleepHours,
+    onChange: function onChange(e) {
+      return set("sleepHours", Number(e.target.value));
+    },
+    style: {
+      width: "100%",
+      padding: "6px 10px",
+      borderRadius: 8,
+      border: "1px solid ".concat(C.border),
+      background: C.bgDeep,
+      color: C.gold,
+      fontFamily: "inherit",
+      fontSize: "1rem",
+      fontWeight: 700,
+      outline: "none",
+      textAlign: "center"
+    }
+  })))), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1.25rem",
+      marginBottom: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "Medications Taken"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexWrap: "wrap",
+      gap: 6,
+      marginTop: 4
+    }
+  }, MEDS.map(function (m) {
+    return /*#__PURE__*/React.createElement(GoldChip, {
+      key: m,
+      label: m,
+      selected: (form.medications || []).includes(m),
+      onClick: function onClick() {
+        return tog("medications", m);
+      },
+      color: "#9b7cd4"
+    });
+  }))), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1.25rem",
+      marginBottom: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "Notes (optional)"), /*#__PURE__*/React.createElement("textarea", {
+    value: form.notes,
+    onChange: function onChange(e) {
+      return set("notes", e.target.value);
+    },
+    placeholder: "Any additional context\u2026",
+    rows: 3,
+    style: {
+      width: "100%",
+      marginTop: 4,
+      padding: "10px 12px",
+      borderRadius: 10,
+      border: "1px solid ".concat(C.border),
+      background: C.bgDeep,
+      color: C.text,
+      fontFamily: "inherit",
+      fontSize: "0.88rem",
+      outline: "none",
+      resize: "vertical",
+      lineHeight: 1.6
+    }
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 8,
+      marginTop: "0.5rem",
+      paddingBottom: "2rem"
+    }
+  }, step > 0 && /*#__PURE__*/React.createElement(OutlineBtn, {
+    onClick: function onClick() {
+      return setStep(function (s) {
+        return s - 1;
+      });
+    },
+    style: {
+      flex: 1
+    }
+  }, "Back"), step < 2 ? /*#__PURE__*/React.createElement(GoldBtn, {
+    onClick: function onClick() {
+      return setStep(function (s) {
+        return s + 1;
+      });
+    },
+    disabled: !canNext[step],
+    style: {
+      flex: 2
+    }
+  }, "Next ", /*#__PURE__*/React.createElement(ChevronRight, {
+    size: 15
+  })) : /*#__PURE__*/React.createElement(GoldBtn, {
+    onClick: save,
+    disabled: saving,
+    style: {
+      flex: 2
+    }
+  }, saving ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Loader, {
+    size: 15,
+    className: "spinning"
+  }), "Saving\u2026") : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Check, {
+    size: 15
+  }), "Save Entry"))));
+}
+
+// ─── ENTRY CARD ───────────────────────────────────────────────────────────────
+// Helper: for display, strip "Region · " prefix to show just the specific area
+var locShort = function locShort(loc) {
+  var p = loc.split(" · ");
+  return p.length === 2 ? p[1] : loc;
+};
+var locRegion = function locRegion(loc) {
+  var p = loc.split(" · ");
+  return p.length === 2 ? p[0] : "";
+};
+function EntryCard(_ref0) {
+  var _entry$medications;
+  var entry = _ref0.entry,
+    onEdit = _ref0.onEdit,
+    onDelete = _ref0.onDelete;
+  var _useState9 = useState(false),
+    _useState0 = _slicedToArray(_useState9, 2),
+    open = _useState0[0],
+    setOpen = _useState0[1];
+  var ps = pillStyle(entry.painLevel);
+
+  // Compact summary: show first 2 location short names + symptom names
+  var locSummary = entry.locations.slice(0, 2).map(locShort).join(", ") + (entry.locations.length > 2 ? " +".concat(entry.locations.length - 2) : "");
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.card,
+      border: "1px solid ".concat(C.border),
+      borderRadius: 12,
+      overflow: "hidden",
+      marginBottom: 8,
+      transition: "border-color .2s"
+    },
+    onMouseEnter: function onMouseEnter(e) {
+      return e.currentTarget.style.borderColor = C.borderGold;
+    },
+    onMouseLeave: function onMouseLeave(e) {
+      return e.currentTarget.style.borderColor = C.border;
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    onClick: function onClick() {
+      return setOpen(function (o) {
+        return !o;
+      });
+    },
+    style: {
+      padding: "12px 14px",
+      cursor: "pointer",
+      display: "flex",
+      gap: 12,
+      alignItems: "flex-start"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: ps.bg,
+      borderRadius: 10,
+      padding: "7px 10px",
+      flexShrink: 0,
+      textAlign: "center",
+      minWidth: 50
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "'Cormorant Garamond',serif",
+      fontSize: "1.55rem",
+      fontWeight: 700,
+      color: ps.text,
+      lineHeight: 1
+    }
+  }, entry.painLevel), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.58rem",
+      color: ps.text,
+      opacity: 0.7,
+      marginTop: 1
+    }
+  }, "/10")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontWeight: 600,
+      fontSize: "0.9rem",
+      color: C.text
+    }
+  }, relDate(entry.loggedAt)), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.7rem",
+      color: C.muted
+    }
+  }, fmt(entry.loggedAt, "time"))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.78rem",
+      color: C.muted,
+      marginTop: 3,
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap"
+    }
+  }, "\uD83D\uDCCD ", locSummary, " \xB7 ", entry.symptoms.join(", ")), entry.triggers.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexWrap: "wrap",
+      gap: 4,
+      marginTop: 5
+    }
+  }, entry.triggers.map(function (t) {
+    return /*#__PURE__*/React.createElement("span", {
+      key: t,
+      style: {
+        fontSize: "0.67rem",
+        padding: "2px 8px",
+        borderRadius: 99,
+        background: "#2a1510",
+        color: "#d4805a"
+      }
+    }, t);
+  }))), /*#__PURE__*/React.createElement(ChevronRight, {
+    size: 13,
+    color: C.muted,
+    style: {
+      transform: open ? "rotate(90deg)" : "none",
+      transition: "transform .2s",
+      flexShrink: 0,
+      marginTop: 3
+    }
+  })), open && /*#__PURE__*/React.createElement("div", {
+    style: {
+      borderTop: "1px solid ".concat(C.border),
+      padding: "12px 14px",
+      background: C.cardAlt
+    },
+    className: "fade-in"
+  }, entry.locations.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: "0.75rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.65rem",
+      color: C.muted,
+      marginBottom: 5,
+      textTransform: "uppercase",
+      letterSpacing: "0.08em"
+    }
+  }, "Locations"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexWrap: "wrap",
+      gap: 4
+    }
+  }, entry.locations.map(function (loc) {
+    return /*#__PURE__*/React.createElement("div", {
+      key: loc,
+      style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 4,
+        padding: "3px 9px",
+        borderRadius: 99,
+        background: C.goldLight,
+        border: "1px solid ".concat(C.borderGold)
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.64rem",
+        color: C.muted
+      }
+    }, locRegion(loc)), locRegion(loc) && /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.6rem",
+        color: C.muted
+      }
+    }, "\xB7"), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.72rem",
+        color: C.gold,
+        fontWeight: 500
+      }
+    }, locShort(loc)));
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "repeat(3,1fr)",
+      gap: "0.75rem",
+      marginBottom: "0.75rem"
+    }
+  }, entry.durationMinutes && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.65rem",
+      color: C.muted,
+      marginBottom: 2
+    }
+  }, "Duration"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.85rem",
+      fontWeight: 600,
+      color: C.gold
+    }
+  }, entry.durationMinutes, "m")), entry.mood && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.65rem",
+      color: C.muted,
+      marginBottom: 2
+    }
+  }, "Mood"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "1.1rem"
+    }
+  }, MOOD_EMO[entry.mood - 1])), entry.sleepHours && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.65rem",
+      color: C.muted,
+      marginBottom: 2
+    }
+  }, "Sleep"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.85rem",
+      fontWeight: 600,
+      color: C.gold
+    }
+  }, entry.sleepHours, "h"))), ((_entry$medications = entry.medications) === null || _entry$medications === void 0 ? void 0 : _entry$medications.length) > 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.75rem",
+      color: "#9b7cd4",
+      marginBottom: 6
+    }
+  }, "\uD83D\uDC8A ", entry.medications.join(", ")), entry.notes && /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.8rem",
+      color: C.muted,
+      fontStyle: "italic",
+      lineHeight: 1.6,
+      marginBottom: 10
+    }
+  }, "\"", entry.notes, "\""), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 6,
+      justifyContent: "flex-end"
+    }
+  }, /*#__PURE__*/React.createElement(OutlineBtn, {
+    onClick: function onClick() {
+      return onEdit(entry);
+    },
+    style: {
+      padding: "5px 12px",
+      fontSize: "0.75rem"
+    }
+  }, /*#__PURE__*/React.createElement(Edit2, {
+    size: 12
+  }), "Edit"), /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return onDelete(entry.id);
+    },
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 5,
+      padding: "5px 12px",
+      borderRadius: 8,
+      border: "1px solid rgba(224,96,112,0.3)",
+      background: "rgba(224,96,112,0.1)",
+      color: "#e06070",
+      fontFamily: "inherit",
+      fontSize: "0.75rem",
+      cursor: "pointer"
+    }
+  }, /*#__PURE__*/React.createElement(Trash2, {
+    size: 12
+  }), "Delete"))));
+}
+
+// ─── DASHBOARD ────────────────────────────────────────────────────────────────
+function Dashboard(_ref1) {
+  var _Object$entries$sort$, _topLocs$;
+  var entries = _ref1.entries,
+    onNavigate = _ref1.onNavigate,
+    onLog = _ref1.onLog,
+    aiInsights = _ref1.aiInsights,
+    loadingAI = _ref1.loadingAI,
+    fetchAI = _ref1.fetchAI;
+  var last7 = entries.filter(function (e) {
+    return new Date(e.loggedAt) >= new Date(Date.now() - 7 * 864e5);
+  });
+  var last30 = entries.filter(function (e) {
+    return new Date(e.loggedAt) >= new Date(Date.now() - 30 * 864e5);
+  });
+  var avg7 = last7.length ? +(last7.reduce(function (s, e) {
+    return s + e.painLevel;
+  }, 0) / last7.length).toFixed(1) : 0;
+  var avg30 = last30.length ? +(last30.reduce(function (s, e) {
+    return s + e.painLevel;
+  }, 0) / last30.length).toFixed(1) : 0;
+  var trend = avg7 - avg30;
+  var peak7 = last7.length ? Math.max.apply(Math, _toConsumableArray(last7.map(function (e) {
+    return e.painLevel;
+  }))) : 0;
+
+  // Top symptom (30d)
+  var sf = {};
+  last30.forEach(function (e) {
+    return e.symptoms.forEach(function (s) {
+      return sf[s] = (sf[s] || 0) + 1;
+    });
+  });
+  var topSym = ((_Object$entries$sort$ = Object.entries(sf).sort(function (a, b) {
+    return b[1] - a[1];
+  })[0]) === null || _Object$entries$sort$ === void 0 ? void 0 : _Object$entries$sort$[0]) || "—";
+
+  // Top locations (30d) — frequency ranked, with avg pain per location
+  var lf = {},
+    lp = {};
+  last30.forEach(function (e) {
+    return e.locations.forEach(function (l) {
+      lf[l] = (lf[l] || 0) + 1;
+      if (!lp[l]) lp[l] = {
+        sum: 0,
+        n: 0
+      };
+      lp[l].sum += e.painLevel;
+      lp[l].n++;
+    });
+  });
+  var topLocs = Object.entries(lf).sort(function (a, b) {
+    return b[1] - a[1];
+  }).slice(0, 5);
+  var topLocName = topLocs[0] ? locShort(topLocs[0][0]) : "—";
+  var topLocMax = ((_topLocs$ = topLocs[0]) === null || _topLocs$ === void 0 ? void 0 : _topLocs$[1]) || 1;
+  var chartData = useMemo(function () {
+    var days = [];
+    var _loop = function _loop() {
+      var day = new Date(Date.now() - i * 864e5);
+      var de = entries.filter(function (e) {
+        return new Date(e.loggedAt).toDateString() === day.toDateString();
+      });
+      days.push({
+        day: fmt(day.toISOString(), "chart"),
+        avg: de.length ? +(de.reduce(function (s, e) {
+          return s + e.painLevel;
+        }, 0) / de.length).toFixed(1) : null
+      });
+    };
+    for (var i = 20; i >= 0; i--) {
+      _loop();
+    }
+    return days;
+  }, [entries]);
+  var hr = new Date().getHours();
+  var greeting = hr < 12 ? "Good morning" : hr < 17 ? "Good afternoon" : "Good evening";
+  return /*#__PURE__*/React.createElement("div", {
+    className: "fade-in"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: "1.5rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.78rem",
+      color: C.muted
+    }
+  }, greeting), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "'Cormorant Garamond',serif",
+      fontSize: "2rem",
+      fontWeight: 600,
+      color: C.text,
+      lineHeight: 1.2,
+      marginTop: 2
+    }
+  }, "Your Pain Overview")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "repeat(3,1fr)",
+      gap: 10,
+      marginBottom: 10
+    }
+  }, [{
+    label: "7-Day Average",
+    val: avg7,
+    sub: /*#__PURE__*/React.createElement("span", {
+      style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 3,
+        fontSize: "0.68rem",
+        color: trend < 0 ? "#4ecf8a" : trend > 0 ? "#e06070" : C.muted
+      }
+    }, trend < 0 ? /*#__PURE__*/React.createElement(TrendingDown, {
+      size: 11
+    }) : trend > 0 ? /*#__PURE__*/React.createElement(TrendingUp, {
+      size: 11
+    }) : null, trend !== 0 ? "".concat(Math.abs(trend).toFixed(1), " vs 30d") : "Stable")
+  }, {
+    label: "Entries (7d)",
+    val: last7.length,
+    sub: /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.68rem",
+        color: C.muted
+      }
+    }, "logged")
+  }, {
+    label: "Peak (7d)",
+    val: "".concat(peak7, "/10"),
+    sub: /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.68rem",
+        color: getPainColor(peak7)
+      }
+    }, getPainLabel(peak7))
+  }].map(function (c, i) {
+    return /*#__PURE__*/React.createElement(NavyCard, {
+      key: i,
+      style: {
+        padding: "0.85rem"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "0.62rem",
+        color: C.muted,
+        marginBottom: 4,
+        textTransform: "uppercase",
+        letterSpacing: "0.08em"
+      }
+    }, c.label), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontFamily: "'Cormorant Garamond',serif",
+        fontSize: "1.75rem",
+        fontWeight: 600,
+        color: C.gold,
+        lineHeight: 1.1
+      }
+    }, c.val), /*#__PURE__*/React.createElement("div", {
+      style: {
+        marginTop: 3
+      }
+    }, c.sub));
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      gap: 10,
+      marginBottom: "1.25rem"
+    }
+  }, [{
+    label: "Top Symptom (30d)",
+    val: topSym,
+    sub: /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.68rem",
+        color: C.muted
+      }
+    }, "most logged")
+  }, {
+    label: "Top Location (30d)",
+    val: topLocName,
+    sub: /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.68rem",
+        color: C.muted
+      }
+    }, "most affected")
+  }].map(function (c, i) {
+    return /*#__PURE__*/React.createElement(NavyCard, {
+      key: i,
+      style: {
+        padding: "0.85rem"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "0.62rem",
+        color: C.muted,
+        marginBottom: 4,
+        textTransform: "uppercase",
+        letterSpacing: "0.08em"
+      }
+    }, c.label), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontFamily: "'Cormorant Garamond',serif",
+        fontSize: "1rem",
+        fontWeight: 600,
+        color: C.gold,
+        lineHeight: 1.3
+      }
+    }, c.val), /*#__PURE__*/React.createElement("div", {
+      style: {
+        marginTop: 3
+      }
+    }, c.sub));
+  })), topLocs.length > 0 && /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      marginBottom: "1.25rem",
+      padding: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      marginBottom: "0.75rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.67rem",
+      fontWeight: 600,
+      letterSpacing: "0.12em",
+      textTransform: "uppercase",
+      color: C.muted
+    }
+  }, "Top Locations \u2014 30 Days"), /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return onNavigate("analytics");
+    },
+    style: {
+      fontSize: "0.72rem",
+      color: C.gold,
+      background: "none",
+      border: "none",
+      cursor: "pointer",
+      fontFamily: "inherit"
+    }
+  }, "Full breakdown \u2192")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: 7
+    }
+  }, topLocs.map(function (_ref10, i) {
+    var _ref11 = _slicedToArray(_ref10, 2),
+      loc = _ref11[0],
+      count = _ref11[1];
+    var region = locRegion(loc);
+    var short = locShort(loc);
+    var avgPain = lp[loc] ? +(lp[loc].sum / lp[loc].n).toFixed(1) : 0;
+    var pct = count / topLocMax * 100;
+    return /*#__PURE__*/React.createElement("div", {
+      key: loc,
+      style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 8
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        width: 16,
+        fontSize: "0.65rem",
+        color: C.muted,
+        textAlign: "right",
+        flexShrink: 0
+      }
+    }, "#", i + 1), /*#__PURE__*/React.createElement("div", {
+      style: {
+        flex: 1,
+        minWidth: 0
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: "flex",
+        justifyContent: "space-between",
+        marginBottom: 3
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.75rem",
+        color: C.text,
+        fontWeight: 500,
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap"
+      }
+    }, short, region && /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: C.muted,
+        fontSize: "0.67rem",
+        marginLeft: 5
+      }
+    }, region)), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.7rem",
+        color: getPainColor(avgPain),
+        fontWeight: 600,
+        flexShrink: 0,
+        marginLeft: 6
+      }
+    }, "avg ", avgPain, "/10")), /*#__PURE__*/React.createElement("div", {
+      style: {
+        height: 5,
+        background: C.bgDeep,
+        borderRadius: 3,
+        overflow: "hidden"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        width: "".concat(pct, "%"),
+        height: "100%",
+        background: "linear-gradient(90deg,".concat(C.gold, ",").concat(getPainColor(avgPain), ")"),
+        borderRadius: 3,
+        transition: "width .4s"
+      }
+    }))), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.72rem",
+        color: C.muted,
+        width: 24,
+        textAlign: "right",
+        flexShrink: 0
+      }
+    }, count, "\xD7"));
+  }))), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      marginBottom: "1.25rem",
+      padding: "1rem 1rem 0.5rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      marginBottom: "0.75rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.67rem",
+      fontWeight: 600,
+      letterSpacing: "0.12em",
+      textTransform: "uppercase",
+      color: C.muted
+    }
+  }, "21-Day Trend"), /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return onNavigate("analytics");
+    },
+    style: {
+      fontSize: "0.72rem",
+      color: C.gold,
+      background: "none",
+      border: "none",
+      cursor: "pointer",
+      fontFamily: "inherit"
+    }
+  }, "View all \u2192")), /*#__PURE__*/React.createElement(ResponsiveContainer, {
+    width: "100%",
+    height: 130
+  }, /*#__PURE__*/React.createElement(AreaChart, {
+    data: chartData,
+    margin: {
+      top: 4,
+      right: 4,
+      left: -30,
+      bottom: 0
+    }
+  }, /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+    id: "ggrad",
+    x1: "0",
+    y1: "0",
+    x2: "0",
+    y2: "1"
+  }, /*#__PURE__*/React.createElement("stop", {
+    offset: "5%",
+    stopColor: C.gold,
+    stopOpacity: 0.35
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: "95%",
+    stopColor: C.gold,
+    stopOpacity: 0
+  }))), /*#__PURE__*/React.createElement(CartesianGrid, {
+    strokeDasharray: "3 3",
+    stroke: "rgba(255,255,255,0.04)",
+    vertical: false
+  }), /*#__PURE__*/React.createElement(XAxis, {
+    dataKey: "day",
+    tick: {
+      fontSize: 9,
+      fill: C.muted
+    },
+    tickLine: false,
+    axisLine: false,
+    interval: 3
+  }), /*#__PURE__*/React.createElement(YAxis, {
+    domain: [0, 10],
+    tick: {
+      fontSize: 9,
+      fill: C.muted
+    },
+    tickLine: false,
+    axisLine: false
+  }), /*#__PURE__*/React.createElement(ReferenceLine, {
+    y: 7,
+    stroke: "#e06070",
+    strokeDasharray: "4 4",
+    strokeOpacity: 0.4
+  }), /*#__PURE__*/React.createElement(Tooltip, {
+    content: /*#__PURE__*/React.createElement(ChartTip, null)
+  }), /*#__PURE__*/React.createElement(Area, {
+    type: "monotone",
+    dataKey: "avg",
+    name: "Pain",
+    stroke: C.gold,
+    strokeWidth: 2,
+    fill: "url(#ggrad)",
+    connectNulls: false,
+    dot: function dot(props) {
+      var cx = props.cx,
+        cy = props.cy,
+        payload = props.payload;
+      if (!payload.avg) return null;
+      return /*#__PURE__*/React.createElement("circle", {
+        key: "d".concat(cx),
+        cx: cx,
+        cy: cy,
+        r: 3,
+        fill: getPainColor(payload.avg),
+        stroke: C.card,
+        strokeWidth: 1.5
+      });
+    }
+  })))), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      marginBottom: "1.25rem",
+      padding: "1rem",
+      border: "1px solid ".concat(C.borderGold)
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      marginBottom: "0.75rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 6,
+      fontSize: "0.82rem",
+      fontWeight: 600,
+      color: C.gold
+    }
+  }, /*#__PURE__*/React.createElement(Sparkles, {
+    size: 14
+  }), " AI Insights"), /*#__PURE__*/React.createElement("button", {
+    onClick: fetchAI,
+    disabled: loadingAI,
+    style: {
+      fontSize: "0.7rem",
+      color: C.gold,
+      background: "none",
+      border: "none",
+      cursor: "pointer",
+      fontFamily: "inherit",
+      display: "flex",
+      alignItems: "center",
+      gap: 4,
+      opacity: loadingAI ? 0.5 : 1
+    }
+  }, /*#__PURE__*/React.createElement(RefreshCw, {
+    size: 11,
+    className: loadingAI ? "spinning" : ""
+  }), loadingAI ? "Analysing…" : "Refresh")), loadingAI && /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: "center",
+      padding: "1rem",
+      color: C.muted,
+      fontSize: "0.82rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "center",
+      marginBottom: 8
+    }
+  }, /*#__PURE__*/React.createElement(Loader, {
+    size: 18,
+    className: "spinning"
+  })), "Analysing your recent data\u2026"), !loadingAI && aiInsights.length === 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: "center",
+      padding: "0.5rem",
+      color: C.muted,
+      fontSize: "0.8rem"
+    }
+  }, "Click Refresh to generate insights from your recent entries."), !loadingAI && aiInsights.map(function (ins, i) {
+    return /*#__PURE__*/React.createElement("div", {
+      key: i,
+      style: {
+        display: "flex",
+        gap: 10,
+        marginBottom: 8,
+        padding: "10px 12px",
+        background: C.bgDeep,
+        borderRadius: 10,
+        border: "1px solid ".concat(C.border)
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        width: 28,
+        height: 28,
+        borderRadius: 8,
+        background: C.goldLight,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexShrink: 0
+      }
+    }, ins.type === "pattern" ? /*#__PURE__*/React.createElement(Brain, {
+      size: 13,
+      color: C.gold
+    }) : ins.type === "trend" ? /*#__PURE__*/React.createElement(TrendingUp, {
+      size: 13,
+      color: C.gold
+    }) : /*#__PURE__*/React.createElement(Zap, {
+      size: 13,
+      color: C.gold
+    })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontWeight: 600,
+        fontSize: "0.82rem",
+        color: C.text,
+        marginBottom: 2
+      }
+    }, ins.title), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "0.77rem",
+        color: C.muted,
+        lineHeight: 1.55
+      }
+    }, ins.insight)));
+  }), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.64rem",
+      color: C.muted,
+      lineHeight: 1.5,
+      marginTop: 6,
+      paddingTop: 8,
+      borderTop: "1px solid ".concat(C.border)
+    }
+  }, "\u26A0 AI observations are not medical advice. Always consult your healthcare provider.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      marginBottom: "0.6rem"
+    }
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "Recent Entries"), /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return onNavigate("entries");
+    },
+    style: {
+      fontSize: "0.72rem",
+      color: C.gold,
+      background: "none",
+      border: "none",
+      cursor: "pointer",
+      fontFamily: "inherit"
+    }
+  }, "View all \u2192")), entries.slice(0, 4).map(function (e) {
+    return /*#__PURE__*/React.createElement(EntryCard, {
+      key: e.id,
+      entry: e,
+      onEdit: function onEdit() {},
+      onDelete: function onDelete() {}
+    });
+  }), /*#__PURE__*/React.createElement("button", {
+    onClick: onLog,
+    style: {
+      position: "fixed",
+      bottom: 24,
+      right: 24,
+      width: 56,
+      height: 56,
+      borderRadius: 28,
+      border: "none",
+      background: C.goldGrad,
+      color: "#080e25",
+      cursor: "pointer",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      boxShadow: "0 4px 24px rgba(201,164,74,0.45)",
+      zIndex: 99,
+      transition: "transform .15s"
+    },
+    onMouseEnter: function onMouseEnter(e) {
+      return e.currentTarget.style.transform = "scale(1.1)";
+    },
+    onMouseLeave: function onMouseLeave(e) {
+      return e.currentTarget.style.transform = "scale(1)";
+    }
+  }, /*#__PURE__*/React.createElement(Plus, {
+    size: 26
+  })));
+}
+
+// ─── ENTRIES LIST ─────────────────────────────────────────────────────────────
+function EntriesList(_ref12) {
+  var entries = _ref12.entries,
+    onEdit = _ref12.onEdit,
+    onDelete = _ref12.onDelete;
+  var _useState1 = useState(""),
+    _useState10 = _slicedToArray(_useState1, 2),
+    q = _useState10[0],
+    setQ = _useState10[1];
+  var _useState11 = useState("all"),
+    _useState12 = _slicedToArray(_useState11, 2),
+    f = _useState12[0],
+    setF = _useState12[1];
+  var filtered = useMemo(function () {
+    return entries.filter(function (e) {
+      var qOk = !q || [].concat(_toConsumableArray(e.symptoms), _toConsumableArray(e.locations), _toConsumableArray(e.triggers), [e.notes || ""]).join(" ").toLowerCase().includes(q.toLowerCase());
+      var fOk = f === "all" || f === "high" && e.painLevel >= 7 || f === "med" && e.painLevel >= 4 && e.painLevel < 7 || f === "low" && e.painLevel < 4;
+      return qOk && fOk;
+    });
+  }, [entries, q, f]);
+  return /*#__PURE__*/React.createElement("div", {
+    className: "fade-in"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "'Cormorant Garamond',serif",
+      fontSize: "1.8rem",
+      color: C.text,
+      marginBottom: "1rem"
+    }
+  }, "Entry History"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 8,
+      marginBottom: "0.75rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      display: "flex",
+      alignItems: "center",
+      gap: 8,
+      background: C.card,
+      border: "1px solid ".concat(C.border),
+      borderRadius: 10,
+      padding: "8px 12px"
+    }
+  }, /*#__PURE__*/React.createElement(Search, {
+    size: 13,
+    color: C.muted
+  }), /*#__PURE__*/React.createElement("input", {
+    value: q,
+    onChange: function onChange(e) {
+      return setQ(e.target.value);
+    },
+    placeholder: "Search entries\u2026",
+    style: {
+      border: "none",
+      background: "none",
+      fontFamily: "inherit",
+      fontSize: "0.85rem",
+      color: C.text,
+      outline: "none",
+      flex: 1
+    }
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 6,
+      marginBottom: "1rem",
+      flexWrap: "wrap"
+    }
+  }, [["all", "All"], ["high", "Severe (7+)"], ["med", "Moderate (4–6)"], ["low", "Mild (< 4)"]].map(function (_ref13) {
+    var _ref14 = _slicedToArray(_ref13, 2),
+      v = _ref14[0],
+      l = _ref14[1];
+    return /*#__PURE__*/React.createElement(GoldChip, {
+      key: v,
+      label: l,
+      selected: f === v,
+      onClick: function onClick() {
+        return setF(v);
+      },
+      color: v === "high" ? "#e06070" : v === "med" ? "#d4805a" : v === "low" ? "#4ecf8a" : undefined
+    });
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.muted,
+      marginBottom: "0.5rem"
+    }
+  }, filtered.length, " entries"), filtered.length === 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: "center",
+      padding: "3rem",
+      color: C.muted
+    }
+  }, "No entries match your search."), filtered.map(function (e) {
+    return /*#__PURE__*/React.createElement(EntryCard, {
+      key: e.id,
+      entry: e,
+      onEdit: onEdit,
+      onDelete: onDelete
+    });
+  }));
+}
+
+// ─── ANALYTICS ────────────────────────────────────────────────────────────────
+function Analytics(_ref15) {
+  var entries = _ref15.entries;
+  var _useState13 = useState("trend"),
+    _useState14 = _slicedToArray(_useState13, 2),
+    tab = _useState14[0],
+    setTab = _useState14[1];
+  var _useState15 = useState(30),
+    _useState16 = _slicedToArray(_useState15, 2),
+    range = _useState16[0],
+    setRange = _useState16[1];
+  var re = useMemo(function () {
+    return entries.filter(function (e) {
+      return new Date(e.loggedAt) >= new Date(Date.now() - range * 864e5);
+    });
+  }, [entries, range]);
+  var trendData = useMemo(function () {
+    var days = [];
+    var _loop2 = function _loop2() {
+      var day = new Date(Date.now() - i * 864e5);
+      var de = entries.filter(function (e) {
+        return new Date(e.loggedAt).toDateString() === day.toDateString();
+      });
+      days.push({
+        day: fmt(day.toISOString(), "chart"),
+        avg: de.length ? +(de.reduce(function (s, e) {
+          return s + e.painLevel;
+        }, 0) / de.length).toFixed(1) : null
+      });
+    };
+    for (var i = range - 1; i >= 0; i--) {
+      _loop2();
+    }
+    return days;
+  }, [entries, range]);
+  var symData = useMemo(function () {
+    var f = {};
+    re.forEach(function (e) {
+      return e.symptoms.forEach(function (s) {
+        return f[s] = (f[s] || 0) + 1;
+      });
+    });
+    return Object.entries(f).sort(function (a, b) {
+      return b[1] - a[1];
+    }).slice(0, 8).map(function (_ref16) {
+      var _ref17 = _slicedToArray(_ref16, 2),
+        n = _ref17[0],
+        c = _ref17[1];
+      return {
+        name: n,
+        count: c
+      };
+    });
+  }, [re]);
+  var scatter = useMemo(function () {
+    return re.filter(function (e) {
+      return e.sleepHours && e.painLevel;
+    }).map(function (e) {
+      return {
+        sleep: e.sleepHours,
+        pain: e.painLevel
+      };
+    });
+  }, [re]);
+  var trigData = useMemo(function () {
+    var f = {};
+    re.forEach(function (e) {
+      return e.triggers.forEach(function (t) {
+        return f[t] = (f[t] || 0) + 1;
+      });
+    });
+    return Object.entries(f).sort(function (a, b) {
+      return b[1] - a[1];
+    }).map(function (_ref18) {
+      var _ref19 = _slicedToArray(_ref18, 2),
+        n = _ref19[0],
+        c = _ref19[1];
+      return {
+        name: n,
+        count: c
+      };
+    });
+  }, [re]);
+
+  // Location analytics — frequency by specific sub-location
+  var locFreqData = useMemo(function () {
+    var f = {};
+    re.forEach(function (e) {
+      return e.locations.forEach(function (l) {
+        f[l] = (f[l] || 0) + 1;
+      });
+    });
+    return Object.entries(f).sort(function (a, b) {
+      return b[1] - a[1];
+    }).slice(0, 12).map(function (_ref20) {
+      var _ref21 = _slicedToArray(_ref20, 2),
+        loc = _ref21[0],
+        count = _ref21[1];
+      return {
+        name: locShort(loc),
+        region: locRegion(loc) || loc,
+        count: count
+      };
+    });
+  }, [re]);
+
+  // Location analytics — frequency by region (grouped)
+  var regionFreqData = useMemo(function () {
+    var f = {};
+    re.forEach(function (e) {
+      return e.locations.forEach(function (l) {
+        var r = locRegion(l) || l;
+        f[r] = (f[r] || 0) + 1;
+      });
+    });
+    return Object.entries(f).sort(function (a, b) {
+      return b[1] - a[1];
+    }).map(function (_ref22) {
+      var _ref23 = _slicedToArray(_ref22, 2),
+        name = _ref23[0],
+        count = _ref23[1];
+      return {
+        name: name,
+        count: count
+      };
+    });
+  }, [re]);
+
+  // Location analytics — average pain per sub-location (top 10)
+  var locPainData = useMemo(function () {
+    var agg = {};
+    re.forEach(function (e) {
+      return e.locations.forEach(function (l) {
+        if (!agg[l]) agg[l] = {
+          sum: 0,
+          n: 0,
+          name: locShort(l),
+          region: locRegion(l) || l
+        };
+        agg[l].sum += e.painLevel;
+        agg[l].n++;
+      });
+    });
+    return Object.values(agg).filter(function (v) {
+      return v.n >= 2;
+    }).map(function (v) {
+      return {
+        name: v.name,
+        region: v.region,
+        avg: +(v.sum / v.n).toFixed(1),
+        count: v.n
+      };
+    }).sort(function (a, b) {
+      return b.avg - a.avg;
+    }).slice(0, 10);
+  }, [re]);
+  var COLORS = [C.gold, "#d4805a", "#4ecf8a", "#9b7cd4", "#e06070", "#4eb5c0", "#84cc4a", "#e8b86a"];
+  var TABS = [["trend", "Trend"], ["locations", "Locations"], ["symptoms", "Symptoms"], ["sleep", "Sleep vs Pain"], ["triggers", "Triggers"]];
+  return /*#__PURE__*/React.createElement("div", {
+    className: "fade-in"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "'Cormorant Garamond',serif",
+      fontSize: "1.8rem",
+      color: C.text,
+      marginBottom: "1rem"
+    }
+  }, "Analytics"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 6,
+      marginBottom: "1.25rem",
+      flexWrap: "wrap"
+    }
+  }, [[7, "7 days"], [14, "14 days"], [30, "30 days"], [60, "60 days"]].map(function (_ref24) {
+    var _ref25 = _slicedToArray(_ref24, 2),
+      n = _ref25[0],
+      l = _ref25[1];
+    return /*#__PURE__*/React.createElement(GoldChip, {
+      key: n,
+      label: l,
+      selected: range === n,
+      onClick: function onClick() {
+        return setRange(n);
+      }
+    });
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 0,
+      background: C.card,
+      borderRadius: 12,
+      padding: 4,
+      border: "1px solid ".concat(C.border),
+      marginBottom: "1.25rem",
+      overflowX: "auto"
+    }
+  }, TABS.map(function (_ref26) {
+    var _ref27 = _slicedToArray(_ref26, 2),
+      v = _ref27[0],
+      l = _ref27[1];
+    return /*#__PURE__*/React.createElement("button", {
+      key: v,
+      onClick: function onClick() {
+        return setTab(v);
+      },
+      style: {
+        flex: 1,
+        padding: "8px 10px",
+        borderRadius: 9,
+        border: "none",
+        fontFamily: "inherit",
+        fontWeight: 500,
+        fontSize: "0.75rem",
+        cursor: "pointer",
+        transition: "all .2s",
+        whiteSpace: "nowrap",
+        background: tab === v ? C.goldLight : "transparent",
+        color: tab === v ? C.gold : "rgba(255,255,255,0.4)"
+      }
+    }, l);
+  })), tab === "trend" && /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1rem 1rem 0.5rem"
+    },
+    className: "slide-up"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.muted,
+      marginBottom: "1rem"
+    }
+  }, "Daily average \u2014 ", range, " days (", re.length, " entries)"), /*#__PURE__*/React.createElement(ResponsiveContainer, {
+    width: "100%",
+    height: 240
+  }, /*#__PURE__*/React.createElement(AreaChart, {
+    data: trendData,
+    margin: {
+      top: 4,
+      right: 4,
+      left: -20,
+      bottom: 0
+    }
+  }, /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+    id: "ag2",
+    x1: "0",
+    y1: "0",
+    x2: "0",
+    y2: "1"
+  }, /*#__PURE__*/React.createElement("stop", {
+    offset: "5%",
+    stopColor: C.gold,
+    stopOpacity: 0.4
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: "95%",
+    stopColor: C.gold,
+    stopOpacity: 0
+  }))), /*#__PURE__*/React.createElement(CartesianGrid, {
+    strokeDasharray: "3 3",
+    stroke: "rgba(255,255,255,0.04)",
+    vertical: false
+  }), /*#__PURE__*/React.createElement(XAxis, {
+    dataKey: "day",
+    tick: {
+      fontSize: 9,
+      fill: C.muted
+    },
+    tickLine: false,
+    axisLine: false,
+    interval: Math.floor(range / 7)
+  }), /*#__PURE__*/React.createElement(YAxis, {
+    domain: [0, 10],
+    tick: {
+      fontSize: 9,
+      fill: C.muted
+    },
+    tickLine: false,
+    axisLine: false
+  }), /*#__PURE__*/React.createElement(ReferenceLine, {
+    y: 7,
+    stroke: "#e06070",
+    strokeDasharray: "4 4",
+    strokeOpacity: 0.5
+  }), /*#__PURE__*/React.createElement(Tooltip, {
+    content: /*#__PURE__*/React.createElement(ChartTip, null)
+  }), /*#__PURE__*/React.createElement(Area, {
+    type: "monotone",
+    dataKey: "avg",
+    name: "Avg Pain",
+    stroke: C.gold,
+    strokeWidth: 2.5,
+    fill: "url(#ag2)",
+    connectNulls: false,
+    dot: function dot(props) {
+      var cx = props.cx,
+        cy = props.cy,
+        payload = props.payload;
+      if (!payload.avg) return null;
+      return /*#__PURE__*/React.createElement("circle", {
+        key: "d".concat(cx),
+        cx: cx,
+        cy: cy,
+        r: 3.5,
+        fill: getPainColor(payload.avg),
+        stroke: C.card,
+        strokeWidth: 1.5
+      });
+    }
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 4,
+      marginTop: 4,
+      fontSize: "0.67rem",
+      color: "#e06070"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 18,
+      borderTop: "2px dashed #e06070"
+    }
+  }), " Severe threshold (7)")), tab === "locations" && /*#__PURE__*/React.createElement("div", {
+    className: "slide-up"
+  }, /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1rem",
+      marginBottom: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.muted,
+      marginBottom: "1rem"
+    }
+  }, "Most affected areas \u2014 last ", range, " days (by number of entries)"), locFreqData.length === 0 ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: "center",
+      padding: "2rem",
+      color: C.muted
+    }
+  }, "No location data in this period.") : /*#__PURE__*/React.createElement(ResponsiveContainer, {
+    width: "100%",
+    height: Math.max(180, locFreqData.length * 30)
+  }, /*#__PURE__*/React.createElement(BarChart, {
+    data: locFreqData,
+    layout: "vertical",
+    margin: {
+      top: 4,
+      right: 50,
+      left: 8,
+      bottom: 4
+    }
+  }, /*#__PURE__*/React.createElement(CartesianGrid, {
+    strokeDasharray: "3 3",
+    stroke: "rgba(255,255,255,0.04)",
+    horizontal: false
+  }), /*#__PURE__*/React.createElement(XAxis, {
+    type: "number",
+    tick: {
+      fontSize: 9,
+      fill: C.muted
+    },
+    tickLine: false,
+    axisLine: false
+  }), /*#__PURE__*/React.createElement(YAxis, {
+    type: "category",
+    dataKey: "name",
+    width: 140,
+    tick: function tick(_ref28) {
+      var x = _ref28.x,
+        y = _ref28.y,
+        payload = _ref28.payload;
+      return /*#__PURE__*/React.createElement("text", {
+        x: x,
+        y: y,
+        dy: 4,
+        textAnchor: "end",
+        fontSize: 9,
+        fill: C.text
+      }, payload.value);
+    },
+    tickLine: false,
+    axisLine: false
+  }), /*#__PURE__*/React.createElement(Tooltip, {
+    content: function content(_ref29) {
+      var active = _ref29.active,
+        payload = _ref29.payload;
+      if (!active || !(payload !== null && payload !== void 0 && payload.length)) return null;
+      var d = payload[0].payload;
+      return /*#__PURE__*/React.createElement("div", {
+        style: {
+          background: C.card,
+          border: "1px solid ".concat(C.border),
+          borderRadius: 10,
+          padding: "8px 12px",
+          fontSize: "0.8rem"
+        }
+      }, /*#__PURE__*/React.createElement("div", {
+        style: {
+          color: C.gold,
+          fontWeight: 600
+        }
+      }, d.name), /*#__PURE__*/React.createElement("div", {
+        style: {
+          color: C.muted,
+          fontSize: "0.72rem"
+        }
+      }, d.region), /*#__PURE__*/React.createElement("div", {
+        style: {
+          color: C.text,
+          marginTop: 2
+        }
+      }, d.count, " ", d.count === 1 ? "entry" : "entries"));
+    }
+  }), /*#__PURE__*/React.createElement(Bar, {
+    dataKey: "count",
+    name: "Entries",
+    radius: [0, 6, 6, 0]
+  }, locFreqData.map(function (_, i) {
+    return /*#__PURE__*/React.createElement(Cell, {
+      key: i,
+      fill: COLORS[i % COLORS.length]
+    });
+  }))))), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1rem",
+      marginBottom: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.muted,
+      marginBottom: "1rem"
+    }
+  }, "Affected body regions \u2014 grouped"), regionFreqData.length === 0 ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: "center",
+      padding: "2rem",
+      color: C.muted
+    }
+  }, "No data.") : /*#__PURE__*/React.createElement(ResponsiveContainer, {
+    width: "100%",
+    height: Math.max(140, regionFreqData.length * 28)
+  }, /*#__PURE__*/React.createElement(BarChart, {
+    data: regionFreqData,
+    layout: "vertical",
+    margin: {
+      top: 4,
+      right: 40,
+      left: 8,
+      bottom: 4
+    }
+  }, /*#__PURE__*/React.createElement(CartesianGrid, {
+    strokeDasharray: "3 3",
+    stroke: "rgba(255,255,255,0.04)",
+    horizontal: false
+  }), /*#__PURE__*/React.createElement(XAxis, {
+    type: "number",
+    tick: {
+      fontSize: 9,
+      fill: C.muted
+    },
+    tickLine: false,
+    axisLine: false
+  }), /*#__PURE__*/React.createElement(YAxis, {
+    type: "category",
+    dataKey: "name",
+    width: 120,
+    tick: {
+      fontSize: 9,
+      fill: C.text
+    },
+    tickLine: false,
+    axisLine: false
+  }), /*#__PURE__*/React.createElement(Tooltip, {
+    content: /*#__PURE__*/React.createElement(ChartTip, null)
+  }), /*#__PURE__*/React.createElement(Bar, {
+    dataKey: "count",
+    name: "Entries",
+    fill: C.gold,
+    radius: [0, 6, 6, 0]
+  })))), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.muted,
+      marginBottom: 4
+    }
+  }, "Average pain level by location"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.gold,
+      padding: "6px 10px",
+      background: C.goldLight,
+      borderRadius: 8,
+      marginBottom: "0.75rem"
+    }
+  }, "Locations with fewer than 2 entries are excluded. Higher averages indicate more severe ongoing pain at that site."), locPainData.length === 0 ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: "center",
+      padding: "1.5rem",
+      color: C.muted,
+      fontSize: "0.82rem"
+    }
+  }, "Not enough data yet \u2014 log more entries to see pain averages per location.") : /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: 8
+    }
+  }, locPainData.map(function (d, i) {
+    return /*#__PURE__*/React.createElement("div", {
+      key: d.name,
+      style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 8
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        width: 16,
+        fontSize: "0.65rem",
+        color: C.muted,
+        textAlign: "right",
+        flexShrink: 0
+      }
+    }, "#", i + 1), /*#__PURE__*/React.createElement("div", {
+      style: {
+        flex: 1,
+        minWidth: 0
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: "flex",
+        justifyContent: "space-between",
+        marginBottom: 3
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.75rem",
+        color: C.text,
+        fontWeight: 500,
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap"
+      }
+    }, d.name, /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: C.muted,
+        fontSize: "0.65rem",
+        marginLeft: 5
+      }
+    }, d.region)), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.7rem",
+        color: getPainColor(d.avg),
+        fontWeight: 700,
+        flexShrink: 0,
+        marginLeft: 6
+      }
+    }, d.avg, "/10")), /*#__PURE__*/React.createElement("div", {
+      style: {
+        height: 6,
+        background: C.bgDeep,
+        borderRadius: 3,
+        overflow: "hidden"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        width: "".concat(d.avg / 10 * 100, "%"),
+        height: "100%",
+        background: getPainColor(d.avg),
+        borderRadius: 3
+      }
+    })), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "0.62rem",
+        color: C.muted,
+        marginTop: 2
+      }
+    }, d.count, " entries")));
+  })))), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1rem"
+    },
+    className: "slide-up"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.muted,
+      marginBottom: "1rem"
+    }
+  }, "Most frequent symptoms \u2014 last ", range, " days"), /*#__PURE__*/React.createElement(ResponsiveContainer, {
+    width: "100%",
+    height: 260
+  }, /*#__PURE__*/React.createElement(BarChart, {
+    data: symData,
+    layout: "vertical",
+    margin: {
+      top: 4,
+      right: 20,
+      left: 10,
+      bottom: 4
+    }
+  }, /*#__PURE__*/React.createElement(CartesianGrid, {
+    strokeDasharray: "3 3",
+    stroke: "rgba(255,255,255,0.04)",
+    horizontal: false
+  }), /*#__PURE__*/React.createElement(XAxis, {
+    type: "number",
+    tick: {
+      fontSize: 9,
+      fill: C.muted
+    },
+    tickLine: false,
+    axisLine: false
+  }), /*#__PURE__*/React.createElement(YAxis, {
+    type: "category",
+    dataKey: "name",
+    width: 72,
+    tick: {
+      fontSize: 9,
+      fill: C.text
+    },
+    tickLine: false,
+    axisLine: false
+  }), /*#__PURE__*/React.createElement(Tooltip, {
+    content: /*#__PURE__*/React.createElement(ChartTip, null)
+  }), /*#__PURE__*/React.createElement(Bar, {
+    dataKey: "count",
+    name: "Occurrences",
+    radius: [0, 6, 6, 0]
+  }, symData.map(function (_, i) {
+    return /*#__PURE__*/React.createElement(Cell, {
+      key: i,
+      fill: COLORS[i % COLORS.length]
+    });
+  }))))), ")}", tab === "sleep" && /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1rem"
+    },
+    className: "slide-up"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.muted,
+      marginBottom: 4
+    }
+  }, "Sleep hours vs pain level"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.78rem",
+      color: C.gold,
+      marginBottom: "0.75rem",
+      padding: "8px 12px",
+      background: C.goldLight,
+      borderRadius: 8
+    }
+  }, "Each dot = one entry. Fewer sleep hours often correlate with higher pain."), /*#__PURE__*/React.createElement(ResponsiveContainer, {
+    width: "100%",
+    height: 220
+  }, /*#__PURE__*/React.createElement(ScatterChart, {
+    margin: {
+      top: 4,
+      right: 4,
+      left: -20,
+      bottom: 4
+    }
+  }, /*#__PURE__*/React.createElement(CartesianGrid, {
+    strokeDasharray: "3 3",
+    stroke: "rgba(255,255,255,0.04)"
+  }), /*#__PURE__*/React.createElement(XAxis, {
+    dataKey: "sleep",
+    type: "number",
+    name: "Sleep",
+    domain: [3, 10],
+    label: {
+      value: "Sleep (hrs)",
+      position: "insideBottomRight",
+      offset: -6,
+      fontSize: 9,
+      fill: C.muted
+    },
+    tick: {
+      fontSize: 9,
+      fill: C.muted
+    },
+    tickLine: false,
+    axisLine: false
+  }), /*#__PURE__*/React.createElement(YAxis, {
+    dataKey: "pain",
+    type: "number",
+    name: "Pain",
+    domain: [0, 10],
+    tick: {
+      fontSize: 9,
+      fill: C.muted
+    },
+    tickLine: false,
+    axisLine: false
+  }), /*#__PURE__*/React.createElement(Tooltip, {
+    cursor: {
+      strokeDasharray: "3 3"
+    },
+    content: function content(_ref30) {
+      var _payload$;
+      var active = _ref30.active,
+        payload = _ref30.payload;
+      if (!active || !(payload !== null && payload !== void 0 && payload.length)) return null;
+      var d = ((_payload$ = payload[0]) === null || _payload$ === void 0 ? void 0 : _payload$.payload) || {};
+      return /*#__PURE__*/React.createElement("div", {
+        style: {
+          background: C.card,
+          border: "1px solid ".concat(C.border),
+          borderRadius: 10,
+          padding: "8px 12px",
+          fontSize: "0.8rem"
+        }
+      }, /*#__PURE__*/React.createElement("div", {
+        style: {
+          color: C.muted
+        }
+      }, "Sleep: ", /*#__PURE__*/React.createElement("strong", {
+        style: {
+          color: C.gold
+        }
+      }, d.sleep, "h")), /*#__PURE__*/React.createElement("div", {
+        style: {
+          color: C.muted
+        }
+      }, "Pain: ", /*#__PURE__*/React.createElement("strong", {
+        style: {
+          color: getPainColor(d.pain)
+        }
+      }, d.pain, "/10")));
+    }
+  }), /*#__PURE__*/React.createElement(Scatter, {
+    data: scatter,
+    fill: C.gold
+  }, scatter.map(function (d, i) {
+    return /*#__PURE__*/React.createElement(Cell, {
+      key: i,
+      fill: getPainColor(d.pain),
+      fillOpacity: 0.75
+    });
+  }))))), tab === "triggers" && /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1rem"
+    },
+    className: "slide-up"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.muted,
+      marginBottom: "1rem"
+    }
+  }, "Trigger frequency \u2014 last ", range, " days"), trigData.length === 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: "center",
+      padding: "2rem",
+      color: C.muted
+    }
+  }, "No triggers logged in this period."), /*#__PURE__*/React.createElement(ResponsiveContainer, {
+    width: "100%",
+    height: 240
+  }, /*#__PURE__*/React.createElement(BarChart, {
+    data: trigData,
+    layout: "vertical",
+    margin: {
+      top: 4,
+      right: 20,
+      left: 20,
+      bottom: 4
+    }
+  }, /*#__PURE__*/React.createElement(CartesianGrid, {
+    strokeDasharray: "3 3",
+    stroke: "rgba(255,255,255,0.04)",
+    horizontal: false
+  }), /*#__PURE__*/React.createElement(XAxis, {
+    type: "number",
+    tick: {
+      fontSize: 9,
+      fill: C.muted
+    },
+    tickLine: false,
+    axisLine: false
+  }), /*#__PURE__*/React.createElement(YAxis, {
+    type: "category",
+    dataKey: "name",
+    width: 110,
+    tick: {
+      fontSize: 9,
+      fill: C.text
+    },
+    tickLine: false,
+    axisLine: false
+  }), /*#__PURE__*/React.createElement(Tooltip, {
+    content: /*#__PURE__*/React.createElement(ChartTip, null)
+  }), /*#__PURE__*/React.createElement(Bar, {
+    dataKey: "count",
+    name: "Times logged",
+    fill: "#d4805a",
+    radius: [0, 6, 6, 0]
+  })))));
+}
+function Reports(_ref31) {
+  var _topLocs$2;
+  var entries = _ref31.entries;
+  var _useState17 = useState(30),
+    _useState18 = _slicedToArray(_useState17, 2),
+    range = _useState18[0],
+    setRange = _useState18[1];
+  var _useState19 = useState(false),
+    _useState20 = _slicedToArray(_useState19, 2),
+    dl = _useState20[0],
+    setDl = _useState20[1];
+  var _useState21 = useState([]),
+    _useState22 = _slicedToArray(_useState21, 2),
+    filterRegions = _useState22[0],
+    setFilterRegions = _useState22[1];
+  var allRegions = Object.keys(BODY_MAP);
+  var togRegion = function togRegion(r) {
+    return setFilterRegions(function (prev) {
+      return prev.includes(r) ? prev.filter(function (x) {
+        return x !== r;
+      }) : [].concat(_toConsumableArray(prev), [r]);
+    });
+  };
+  var clearFilter = function clearFilter() {
+    return setFilterRegions([]);
+  };
+  var re = entries.filter(function (e) {
+    return new Date(e.loggedAt) >= new Date(Date.now() - range * 864e5);
+  });
+  var filteredRe = filterRegions.length === 0 ? re : re.filter(function (e) {
+    return e.locations.some(function (l) {
+      return filterRegions.includes(locRegion(l) || l);
+    });
+  });
+  var avg = filteredRe.length ? +(filteredRe.reduce(function (s, e) {
+    return s + e.painLevel;
+  }, 0) / filteredRe.length).toFixed(1) : 0;
+  var peak = filteredRe.length ? Math.max.apply(Math, _toConsumableArray(filteredRe.map(function (e) {
+    return e.painLevel;
+  }))) : 0;
+  var sf = {};
+  filteredRe.forEach(function (e) {
+    return e.symptoms.forEach(function (s) {
+      return sf[s] = (sf[s] || 0) + 1;
+    });
+  });
+  var top5sym = Object.entries(sf).sort(function (a, b) {
+    return b[1] - a[1];
+  }).slice(0, 5).map(function (_ref32) {
+    var _ref33 = _slicedToArray(_ref32, 1),
+      s = _ref33[0];
+    return s;
+  });
+  var lf = {},
+    lp = {};
+  filteredRe.forEach(function (e) {
+    return e.locations.forEach(function (l) {
+      if (filterRegions.length > 0 && !filterRegions.includes(locRegion(l) || l)) return;
+      lf[l] = (lf[l] || 0) + 1;
+      if (!lp[l]) lp[l] = {
+        sum: 0,
+        n: 0
+      };
+      lp[l].sum += e.painLevel;
+      lp[l].n++;
+    });
+  });
+  var topLocs = Object.entries(lf).sort(function (a, b) {
+    return b[1] - a[1];
+  }).slice(0, 8);
+  var topLocMax = ((_topLocs$2 = topLocs[0]) === null || _topLocs$2 === void 0 ? void 0 : _topLocs$2[1]) || 1;
+  var tf = {};
+  filteredRe.forEach(function (e) {
+    return e.triggers.forEach(function (t) {
+      return tf[t] = (tf[t] || 0) + 1;
+    });
+  });
+  var top4trig = Object.entries(tf).sort(function (a, b) {
+    return b[1] - a[1];
+  }).slice(0, 4).map(function (_ref34) {
+    var _ref35 = _slicedToArray(_ref34, 1),
+      t = _ref35[0];
+    return t;
+  });
+  var PRESETS = [{
+    label: "🧠 Neurology",
+    regions: ["Head", "Face", "Neck", "Spinal Cord & Nerve Roots", "Peripheral Nerve Pathways"]
+  }, {
+    label: "🦴 Spine / Back",
+    regions: ["Upper Back", "Lower Back", "Spinal Cord & Nerve Roots", "Pelvis & Groin"]
+  }, {
+    label: "🖐 Upper Limbs",
+    regions: ["Shoulders", "Arms", "Hands & Fingers", "Peripheral Nerve Pathways"]
+  }, {
+    label: "🦵 Lower Limbs",
+    regions: ["Hips", "Knees", "Legs", "Feet & Toes", "Peripheral Nerve Pathways"]
+  }, {
+    label: "🫀 Chest / Abdomen",
+    regions: ["Chest", "Abdomen"]
+  }];
+  var isPresetActive = function isPresetActive(p) {
+    return p.regions.length === filterRegions.length && p.regions.every(function (r) {
+      return filterRegions.includes(r);
+    });
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    className: "fade-in"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "'Cormorant Garamond',serif",
+      fontSize: "1.8rem",
+      color: C.text,
+      marginBottom: "0.5rem"
+    }
+  }, "Reports & Export"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.82rem",
+      color: C.muted,
+      marginBottom: "1.25rem",
+      lineHeight: 1.6
+    }
+  }, "Filter by body area before your appointment, then export a focused summary for your specialist."), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1.25rem",
+      marginBottom: "1rem",
+      border: "1px solid ".concat(filterRegions.length > 0 ? C.borderGold : C.border)
+    }
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "Filter by Body Area"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.75rem",
+      color: C.muted,
+      lineHeight: 1.6,
+      marginBottom: "0.85rem"
+    }
+  }, "Choose the areas relevant to your appointment. Leave blank to include all entries."), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.67rem",
+      color: C.muted,
+      textTransform: "uppercase",
+      letterSpacing: "0.08em",
+      marginBottom: 6
+    }
+  }, "Quick select \u2014 specialist preset"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexWrap: "wrap",
+      gap: 6,
+      marginBottom: "1rem"
+    }
+  }, PRESETS.map(function (p) {
+    return /*#__PURE__*/React.createElement("button", {
+      key: p.label,
+      onClick: function onClick() {
+        return isPresetActive(p) ? clearFilter() : setFilterRegions(p.regions);
+      },
+      style: {
+        padding: "6px 13px",
+        borderRadius: 99,
+        fontFamily: "inherit",
+        fontSize: "0.78rem",
+        fontWeight: isPresetActive(p) ? 600 : 400,
+        cursor: "pointer",
+        transition: "all .15s",
+        border: "1.5px solid ".concat(isPresetActive(p) ? C.gold : "rgba(255,255,255,0.15)"),
+        background: isPresetActive(p) ? C.goldLight : "transparent",
+        color: isPresetActive(p) ? C.gold : "rgba(255,255,255,0.55)"
+      }
+    }, p.label);
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.67rem",
+      color: C.muted,
+      textTransform: "uppercase",
+      letterSpacing: "0.08em",
+      marginBottom: 6
+    }
+  }, "Or pick individual regions"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexWrap: "wrap",
+      gap: 5
+    }
+  }, allRegions.map(function (r) {
+    var sel = filterRegions.includes(r);
+    return /*#__PURE__*/React.createElement("button", {
+      key: r,
+      onClick: function onClick() {
+        return togRegion(r);
+      },
+      style: {
+        padding: "4px 11px",
+        borderRadius: 99,
+        fontFamily: "inherit",
+        fontSize: "0.73rem",
+        fontWeight: sel ? 600 : 400,
+        cursor: "pointer",
+        transition: "all .15s",
+        border: "1.5px solid ".concat(sel ? C.gold : "rgba(255,255,255,0.1)"),
+        background: sel ? C.goldLight : "rgba(255,255,255,0.03)",
+        color: sel ? C.gold : "rgba(255,255,255,0.4)"
+      }
+    }, sel && "✓ ", r);
+  })), filterRegions.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      marginTop: "0.85rem",
+      padding: "8px 12px",
+      background: C.bgDeep,
+      borderRadius: 8,
+      border: "1px solid ".concat(C.borderGold)
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.75rem",
+      color: C.gold
+    }
+  }, /*#__PURE__*/React.createElement("strong", null, filterRegions.length), " region", filterRegions.length > 1 ? "s" : "", " selected \xB7", " ", /*#__PURE__*/React.createElement("strong", null, filteredRe.length), " matching entr", filteredRe.length === 1 ? "y" : "ies"), /*#__PURE__*/React.createElement("button", {
+    onClick: clearFilter,
+    style: {
+      fontSize: "0.72rem",
+      color: C.muted,
+      background: "none",
+      border: "none",
+      cursor: "pointer",
+      fontFamily: "inherit",
+      display: "flex",
+      alignItems: "center",
+      gap: 3
+    }
+  }, /*#__PURE__*/React.createElement(X, {
+    size: 11
+  }), " Clear"))), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1.25rem",
+      marginBottom: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "Date Range"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 6,
+      flexWrap: "wrap",
+      marginTop: 4
+    }
+  }, [[7, "Last 7 days"], [14, "Last 14 days"], [30, "Last 30 days"], [60, "Last 60 days"]].map(function (_ref36) {
+    var _ref37 = _slicedToArray(_ref36, 2),
+      n = _ref37[0],
+      l = _ref37[1];
+    return /*#__PURE__*/React.createElement(GoldChip, {
+      key: n,
+      label: l,
+      selected: range === n,
+      onClick: function onClick() {
+        return setRange(n);
+      }
+    });
+  }))), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1.25rem",
+      marginBottom: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "Summary Preview"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.bgDeep,
+      borderRadius: 10,
+      padding: "1rem",
+      marginTop: 4,
+      border: "1px solid ".concat(C.border)
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "'Cormorant Garamond',serif",
+      fontSize: "1.1rem",
+      color: C.gold,
+      marginBottom: 4
+    }
+  }, "Pain & Symptom Report \u2014 Last ", range, " Days"), filterRegions.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.muted,
+      marginBottom: "0.85rem",
+      lineHeight: 1.5
+    }
+  }, "Filtered to: ", /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: C.gold
+    }
+  }, filterRegions.join(", "))), filteredRe.length === 0 ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: "center",
+      padding: "1.5rem",
+      color: C.muted,
+      fontSize: "0.82rem"
+    }
+  }, "No entries match the selected filters.") : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      gap: 8,
+      marginBottom: "1rem"
+    }
+  }, [["Entries Included", filteredRe.length], ["Average Pain", "".concat(avg, "/10")], ["Peak Pain", "".concat(peak, "/10")], ["High Pain Days (≥ 7)", filteredRe.filter(function (e) {
+    return e.painLevel >= 7;
+  }).length]].map(function (_ref38) {
+    var _ref39 = _slicedToArray(_ref38, 2),
+      l = _ref39[0],
+      v = _ref39[1];
+    return /*#__PURE__*/React.createElement("div", {
+      key: l,
+      style: {
+        padding: "8px 10px",
+        background: C.card,
+        borderRadius: 8,
+        border: "1px solid ".concat(C.border)
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "0.67rem",
+        color: C.muted
+      }
+    }, l), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "0.95rem",
+        fontWeight: 700,
+        color: C.gold,
+        marginTop: 2
+      }
+    }, v));
+  })), topLocs.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.67rem",
+      color: C.muted,
+      textTransform: "uppercase",
+      letterSpacing: "0.08em",
+      marginBottom: 8
+    }
+  }, "Top Affected Locations"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: 7
+    }
+  }, topLocs.map(function (_ref40, i) {
+    var _ref41 = _slicedToArray(_ref40, 2),
+      loc = _ref41[0],
+      count = _ref41[1];
+    var avgP = lp[loc] ? +(lp[loc].sum / lp[loc].n).toFixed(1) : 0;
+    return /*#__PURE__*/React.createElement("div", {
+      key: loc,
+      style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 8
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        width: 14,
+        fontSize: "0.62rem",
+        color: C.muted,
+        textAlign: "right",
+        flexShrink: 0
+      }
+    }, "#", i + 1), /*#__PURE__*/React.createElement("div", {
+      style: {
+        flex: 1,
+        minWidth: 0
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: "flex",
+        justifyContent: "space-between",
+        marginBottom: 2
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.75rem",
+        color: C.text,
+        fontWeight: 500,
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap"
+      }
+    }, locShort(loc), locRegion(loc) && /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: C.muted,
+        fontSize: "0.65rem",
+        marginLeft: 4
+      }
+    }, locRegion(loc))), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.68rem",
+        color: getPainColor(avgP),
+        fontWeight: 600,
+        flexShrink: 0,
+        marginLeft: 4
+      }
+    }, "avg ", avgP, "/10")), /*#__PURE__*/React.createElement("div", {
+      style: {
+        height: 4,
+        background: C.card,
+        borderRadius: 2,
+        overflow: "hidden"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        width: "".concat(count / topLocMax * 100, "%"),
+        height: "100%",
+        background: "linear-gradient(90deg,".concat(C.gold, ",").concat(getPainColor(avgP), ")"),
+        borderRadius: 2
+      }
+    })), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "0.62rem",
+        color: C.muted,
+        marginTop: 1
+      }
+    }, count, " ", count === 1 ? "entry" : "entries")));
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      gap: 8
+    }
+  }, top5sym.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: "8px 10px",
+      background: C.card,
+      borderRadius: 8,
+      border: "1px solid ".concat(C.border)
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.67rem",
+      color: C.muted,
+      marginBottom: 5
+    }
+  }, "Top Symptoms"), top5sym.map(function (s) {
+    return /*#__PURE__*/React.createElement("div", {
+      key: s,
+      style: {
+        fontSize: "0.75rem",
+        color: C.text,
+        marginBottom: 3,
+        display: "flex",
+        alignItems: "center",
+        gap: 5
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        width: 5,
+        height: 5,
+        borderRadius: "50%",
+        background: C.gold,
+        flexShrink: 0
+      }
+    }), s);
+  })), top4trig.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: "8px 10px",
+      background: C.card,
+      borderRadius: 8,
+      border: "1px solid ".concat(C.border)
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.67rem",
+      color: C.muted,
+      marginBottom: 5
+    }
+  }, "Top Triggers"), top4trig.map(function (t) {
+    return /*#__PURE__*/React.createElement("div", {
+      key: t,
+      style: {
+        fontSize: "0.75rem",
+        color: "#d4805a",
+        marginBottom: 3,
+        display: "flex",
+        alignItems: "center",
+        gap: 5
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        width: 5,
+        height: 5,
+        borderRadius: "50%",
+        background: "#d4805a",
+        flexShrink: 0
+      }
+    }), t);
+  })))))), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1.25rem",
+      marginBottom: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "Export Options"), filterRegions.length > 0 && /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.72rem",
+      color: C.gold,
+      marginBottom: "0.75rem"
+    }
+  }, "Export includes only entries matching your body area filter (", filteredRe.length, " entries)."), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: 8,
+      marginTop: 4
+    }
+  }, [{
+    label: "Download CSV",
+    sub: "".concat(filteredRe.length, " entries \xB7 Spreadsheet compatible"),
+    icon: /*#__PURE__*/React.createElement(Download, {
+      size: 15,
+      color: "#4ecf8a"
+    }),
+    iconBg: "rgba(78,207,138,0.12)",
+    action: function action() {
+      setDl(true);
+      setTimeout(function () {
+        exportCSV(filteredRe);
+        setDl(false);
+      }, 400);
+    }
+  }, {
+    label: "Print / Save as PDF",
+    sub: "Clinician-ready printable view",
+    icon: /*#__PURE__*/React.createElement(FileText, {
+      size: 15,
+      color: C.gold
+    }),
+    iconBg: C.goldLight,
+    action: function action() {
+      return window.print();
+    }
+  }].map(function (b, i) {
+    return /*#__PURE__*/React.createElement("button", {
+      key: i,
+      onClick: b.action,
+      disabled: filteredRe.length === 0,
+      style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 10,
+        padding: "12px 14px",
+        borderRadius: 10,
+        border: "1px solid ".concat(C.border),
+        background: C.bgDeep,
+        cursor: filteredRe.length === 0 ? "not-allowed" : "pointer",
+        fontFamily: "inherit",
+        transition: "border-color .15s",
+        opacity: filteredRe.length === 0 ? 0.5 : 1
+      },
+      onMouseEnter: function onMouseEnter(e) {
+        if (filteredRe.length > 0) e.currentTarget.style.borderColor = C.borderGold;
+      },
+      onMouseLeave: function onMouseLeave(e) {
+        return e.currentTarget.style.borderColor = C.border;
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        width: 36,
+        height: 36,
+        borderRadius: 9,
+        background: b.iconBg,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+      }
+    }, b.icon), /*#__PURE__*/React.createElement("div", {
+      style: {
+        textAlign: "left",
+        flex: 1
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "0.88rem",
+        fontWeight: 600,
+        color: C.text
+      }
+    }, b.label), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "0.72rem",
+        color: C.muted
+      }
+    }, b.sub)), /*#__PURE__*/React.createElement(ChevronRight, {
+      size: 13,
+      color: C.muted
+    }));
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: "12px 14px",
+      borderRadius: 10,
+      background: "rgba(201,164,74,0.07)",
+      border: "1px solid ".concat(C.borderGold),
+      fontSize: "0.75rem",
+      color: C.muted,
+      lineHeight: 1.6
+    }
+  }, /*#__PURE__*/React.createElement("strong", {
+    style: {
+      color: C.gold
+    }
+  }, "Privacy:"), " Exports contain personal health data. Only share with trusted healthcare providers."));
+}
+
+// ─── SETTINGS ─────────────────────────────────────────────────────────────────
+function SettingsScreen(_ref42) {
+  var onClearData = _ref42.onClearData;
+  var _useState23 = useState(false),
+    _useState24 = _slicedToArray(_useState23, 2),
+    confirm = _useState24[0],
+    setConfirm = _useState24[1];
+  return /*#__PURE__*/React.createElement("div", {
+    className: "fade-in"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "'Cormorant Garamond',serif",
+      fontSize: "1.8rem",
+      color: C.text,
+      marginBottom: "1.25rem"
+    }
+  }, "Settings"), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1.25rem",
+      marginBottom: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "About"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 8,
+      padding: "10px 0"
+    }
+  }, /*#__PURE__*/React.createElement(Info, {
+    size: 15,
+    color: C.muted
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.88rem",
+      fontWeight: 500,
+      color: C.text
+    }
+  }, "PainLog \u2014 Personal Edition"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.7rem",
+      color: C.muted
+    }
+  }, "v1.0 \xB7 All data stored in session only")))), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1.25rem",
+      marginBottom: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "Privacy & Data"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.8rem",
+      color: C.muted,
+      lineHeight: 1.7,
+      marginBottom: "1rem"
+    }
+  }, "All data lives in this browser session only. Nothing is sent to external servers."), !confirm ? /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return setConfirm(true);
+    },
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 6,
+      padding: "9px 16px",
+      borderRadius: 10,
+      border: "1px solid rgba(224,96,112,0.3)",
+      background: "rgba(224,96,112,0.08)",
+      color: "#e06070",
+      fontFamily: "inherit",
+      fontSize: "0.85rem",
+      cursor: "pointer"
+    }
+  }, /*#__PURE__*/React.createElement(Trash2, {
+    size: 14
+  }), " Clear All Data") : /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: "rgba(224,96,112,0.08)",
+      border: "1px solid rgba(224,96,112,0.3)",
+      borderRadius: 10,
+      padding: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.82rem",
+      color: "#e06070",
+      marginBottom: "0.75rem",
+      fontWeight: 500
+    }
+  }, "Delete all entries in this session?"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 6
+    }
+  }, /*#__PURE__*/React.createElement(OutlineBtn, {
+    onClick: function onClick() {
+      return setConfirm(false);
+    },
+    style: {
+      flex: 1,
+      fontSize: "0.8rem"
+    }
+  }, "Cancel"), /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      onClearData();
+      setConfirm(false);
+    },
+    style: {
+      flex: 1,
+      padding: "8px",
+      borderRadius: 8,
+      border: "none",
+      background: "#e06070",
+      color: "white",
+      fontFamily: "inherit",
+      fontSize: "0.8rem",
+      fontWeight: 600,
+      cursor: "pointer"
+    }
+  }, "Delete All")))), /*#__PURE__*/React.createElement(NavyCard, {
+    style: {
+      padding: "1.25rem",
+      border: "1px solid rgba(224,96,112,0.2)",
+      background: "rgba(224,96,112,0.05)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 8,
+      alignItems: "flex-start"
+    }
+  }, /*#__PURE__*/React.createElement(AlertTriangle, {
+    size: 15,
+    color: "#e06070",
+    style: {
+      flexShrink: 0,
+      marginTop: 1
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.75rem",
+      color: C.muted,
+      lineHeight: 1.65
+    }
+  }, /*#__PURE__*/React.createElement("strong", {
+    style: {
+      color: "#e06070"
+    }
+  }, "Medical Disclaimer:"), " PainLog is a personal journaling tool only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional."))));
+}
+
+// ─── TAB NAVIGATION (matching screenshot exactly) ─────────────────────────────
+var TABS = [{
+  id: "dashboard",
+  label: "Dashboard"
+}, {
+  id: "log",
+  label: "Log Entry"
+}, {
+  id: "entries",
+  label: "History"
+}, {
+  id: "analytics",
+  label: "Analytics"
+}, {
+  id: "reports",
+  label: "Reports"
+}, {
+  id: "settings",
+  label: "Settings"
+}];
+function TabNav(_ref43) {
+  var active = _ref43.active,
+    setScreen = _ref43.setScreen;
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.bgDeep,
+      borderBottom: "1px solid ".concat(C.border),
+      overflowX: "auto"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: 900,
+      margin: "0 auto",
+      display: "flex",
+      paddingLeft: "1rem",
+      paddingRight: "1rem"
+    }
+  }, TABS.map(function (t) {
+    return /*#__PURE__*/React.createElement("button", {
+      key: t.id,
+      onClick: function onClick() {
+        return setScreen(t.id);
+      },
+      style: {
+        padding: "13px 18px",
+        border: "none",
+        borderBottom: "3px solid ".concat(active === t.id ? C.gold : "transparent"),
+        background: "transparent",
+        color: active === t.id ? C.gold : "rgba(255,255,255,0.4)",
+        fontFamily: "inherit",
+        fontSize: "0.88rem",
+        fontWeight: active === t.id ? 600 : 400,
+        cursor: "pointer",
+        transition: "all .2s",
+        whiteSpace: "nowrap"
+      }
+    }, t.label);
+  })));
+}
+
+// ─── STORAGE KEY ─────────────────────────────────────────────────────────────
+var STORAGE_KEY = "painlog-entries";
+
+// ─── ROOT APP ─────────────────────────────────────────────────────────────────
+function App() {
+  var _useState25 = useState("dashboard"),
+    _useState26 = _slicedToArray(_useState25, 2),
+    screen = _useState26[0],
+    setScreen = _useState26[1];
+  var _useState27 = useState([]),
+    _useState28 = _slicedToArray(_useState27, 2),
+    entries = _useState28[0],
+    setEntries = _useState28[1];
+  var _useState29 = useState(null),
+    _useState30 = _slicedToArray(_useState29, 2),
+    editEntry = _useState30[0],
+    setEditEntry = _useState30[1];
+  var _useState31 = useState([]),
+    _useState32 = _slicedToArray(_useState31, 2),
+    aiInsights = _useState32[0],
+    setAiInsights = _useState32[1];
+  var _useState33 = useState(false),
+    _useState34 = _slicedToArray(_useState33, 2),
+    loadingAI = _useState34[0],
+    setLoadingAI = _useState34[1];
+  // Storage states
+  var _useState35 = useState(false),
+    _useState36 = _slicedToArray(_useState35, 2),
+    storageReady = _useState36[0],
+    setStorageReady = _useState36[1]; // true once initial load done
+  var _useState37 = useState(false),
+    _useState38 = _slicedToArray(_useState37, 2),
+    isSample = _useState38[0],
+    setIsSample = _useState38[1]; // true if we fell back to sample data
+  var _useState39 = useState("idle"),
+    _useState40 = _slicedToArray(_useState39, 2),
+    saveStatus = _useState40[0],
+    setSaveStatus = _useState40[1]; // "idle" | "saving" | "saved" | "error"
+
+  // ── Load from storage on mount ──────────────────────────────────────────────
+  useEffect(function () {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        var saved = JSON.parse(raw);
+        if (Array.isArray(saved) && saved.length > 0) {
+          setEntries(saved);
+          setIsSample(false);
+        } else {
+          setEntries(INIT_DATA);
+          setIsSample(true);
+        }
+      } else {
+        // First visit — seed with sample data so the app isn't empty
+        setEntries(INIT_DATA);
+        setIsSample(true);
+      }
+    } catch (_unused) {
+      setEntries(INIT_DATA);
+      setIsSample(true);
+    }
+    setStorageReady(true);
+  }, []);
+
+  // ── Auto-save whenever entries change (after initial load) ──────────────────
+  useEffect(function () {
+    if (!storageReady) return;
+    var timer;
+    setSaveStatus("saving");
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+      setSaveStatus("saved");
+      setIsSample(false);
+      timer = setTimeout(function () {
+        return setSaveStatus("idle");
+      }, 2000);
+    } catch (_unused2) {
+      setSaveStatus("error");
+      timer = setTimeout(function () {
+        return setSaveStatus("idle");
+      }, 3000);
+    }
+    return function () {
+      return clearTimeout(timer);
+    };
+  }, [entries, storageReady]);
+
+  // ── Entry CRUD ───────────────────────────────────────────────────────────────
+  var saveEntry = useCallback(function (entry) {
+    setEntries(function (prev) {
+      var exists = prev.find(function (e) {
+        return e.id === entry.id;
+      });
+      var next = exists ? prev.map(function (e) {
+        return e.id === entry.id ? entry : e;
+      }) : [entry].concat(_toConsumableArray(prev));
+      return next.sort(function (a, b) {
+        return new Date(b.loggedAt) - new Date(a.loggedAt);
+      });
+    });
+    setEditEntry(null);
+    setScreen("dashboard");
+  }, []);
+  var deleteEntry = useCallback(function (id) {
+    return setEntries(function (prev) {
+      return prev.filter(function (e) {
+        return e.id !== id;
+      });
+    });
+  }, []);
+  var editEnt = useCallback(function (entry) {
+    setEditEntry(entry);
+    setScreen("log");
+  }, []);
+  var clearData = useCallback(function () {
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch (_unused3) {}
+    setEntries([]);
+  }, []);
+
+  // ── AI Insights ──────────────────────────────────────────────────────────────
+  var fetchAI = useCallback(/*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
+    var last30, avg, sf, tf, topSx, topTr, avgSleep, prompt, res, data, text, _t;
+    return _regenerator().w(function (_context) {
+      while (1) switch (_context.p = _context.n) {
+        case 0:
+          setLoadingAI(true);
+          _context.p = 1;
+          last30 = entries.slice(0, 30);
+          avg = (last30.reduce(function (s, e) {
+            return s + e.painLevel;
+          }, 0) / last30.length).toFixed(1);
+          sf = {}, tf = {};
+          last30.forEach(function (e) {
+            e.symptoms.forEach(function (s) {
+              return sf[s] = (sf[s] || 0) + 1;
+            });
+            e.triggers.forEach(function (t) {
+              return tf[t] = (tf[t] || 0) + 1;
+            });
+          });
+          topSx = Object.entries(sf).sort(function (a, b) {
+            return b[1] - a[1];
+          }).slice(0, 3).map(function (_ref45) {
+            var _ref46 = _slicedToArray(_ref45, 1),
+              s = _ref46[0];
+            return s;
+          });
+          topTr = Object.entries(tf).sort(function (a, b) {
+            return b[1] - a[1];
+          }).slice(0, 2).map(function (_ref47) {
+            var _ref48 = _slicedToArray(_ref47, 1),
+              t = _ref48[0];
+            return t;
+          });
+          avgSleep = (last30.reduce(function (s, e) {
+            return s + (e.sleepHours || 7);
+          }, 0) / last30.length).toFixed(1);
+          prompt = "You are a compassionate health journal assistant. Provide 3 concise, helpful observations (NOT medical advice) based on this data.\n\nPain data (last ".concat(last30.length, " entries):\n- Average pain: ").concat(avg, "/10\n- High-pain entries (>=7): ").concat(last30.filter(function (e) {
+            return e.painLevel >= 7;
+          }).length, "\n- Top symptoms: ").concat(topSx.join(", ") || "varied", "\n- Reported triggers: ").concat(topTr.join(", ") || "none logged", "\n- Average sleep: ").concat(avgSleep, " hrs/night\n\nFormat response as JSON array ONLY (no markdown):\n[{\"title\":\"Short title\",\"insight\":\"1-2 sentence observation\",\"type\":\"pattern|trend|tip\"}]");
+          _context.n = 2;
+          return fetch("https://api.anthropic.com/v1/messages", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              model: "claude-sonnet-4-20250514",
+              max_tokens: 800,
+              messages: [{
+                role: "user",
+                content: prompt
+              }]
+            })
+          });
+        case 2:
+          res = _context.v;
+          _context.n = 3;
+          return res.json();
+        case 3:
+          data = _context.v;
+          text = data.content[0].text.replace(/```json|```/g, "").trim();
+          setAiInsights(JSON.parse(text));
+          _context.n = 5;
+          break;
+        case 4:
+          _context.p = 4;
+          _t = _context.v;
+          setAiInsights([{
+            title: "Could not load insights",
+            insight: "Please try again.",
+            type: "tip"
+          }]);
+        case 5:
+          setLoadingAI(false);
+        case 6:
+          return _context.a(2);
+      }
+    }, _callee, null, [[1, 4]]);
+  })), [entries]);
+  var goLog = useCallback(function () {
+    setEditEntry(null);
+    setScreen("log");
+  }, []);
+  var navTo = useCallback(function (s) {
+    return setScreen(s);
+  }, []);
+
+  // ── Loading splash while reading from storage ────────────────────────────────
+  if (!storageReady) {
+    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("style", null, STYLES), /*#__PURE__*/React.createElement("div", {
+      style: {
+        minHeight: "100vh",
+        background: C.bg,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+        gap: 16
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        width: 48,
+        height: 48,
+        borderRadius: 14,
+        background: C.goldGrad,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+      }
+    }, /*#__PURE__*/React.createElement(Activity, {
+      size: 24,
+      color: "#080e25"
+    })), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontFamily: "'Cormorant Garamond',serif",
+        fontSize: "1.6rem",
+        fontStyle: "italic",
+        background: C.goldGrad,
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent"
+      }
+    }, "PainLog"), /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 8,
+        color: C.muted,
+        fontSize: "0.82rem"
+      }
+    }, /*#__PURE__*/React.createElement(Loader, {
+      size: 14,
+      className: "spinning"
+    }), " Loading your data\u2026")));
+  }
+
+  // ── Save status badge (shown in header area) ─────────────────────────────────
+  var SaveBadge = function SaveBadge() {
+    if (saveStatus === "idle") return null;
+    var cfg = {
+      saving: {
+        text: "Saving…",
+        color: C.muted,
+        icon: /*#__PURE__*/React.createElement(Loader, {
+          size: 11,
+          className: "spinning"
+        })
+      },
+      saved: {
+        text: "Saved ✓",
+        color: "#4ecf8a",
+        icon: null
+      },
+      error: {
+        text: "Save failed",
+        color: "#e06070",
+        icon: null
+      }
+    }[saveStatus];
+    return /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 5,
+        fontSize: "0.72rem",
+        color: cfg.color,
+        transition: "opacity .3s"
+      }
+    }, cfg.icon, cfg.text);
+  };
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("style", null, STYLES), /*#__PURE__*/React.createElement("div", {
+    style: {
+      minHeight: "100vh",
+      background: C.bg,
+      display: "flex",
+      flexDirection: "column"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.bgDeep,
+      borderBottom: "1px solid ".concat(C.border),
+      padding: "0.9rem 1.5rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: 900,
+      margin: "0 auto",
+      display: "flex",
+      alignItems: "center",
+      gap: "1.5rem",
+      flexWrap: "wrap"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 10
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 38,
+      height: 38,
+      borderRadius: 10,
+      background: C.goldGrad,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }
+  }, /*#__PURE__*/React.createElement(Activity, {
+    size: 19,
+    color: "#080e25"
+  })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "'Cormorant Garamond',serif",
+      fontSize: "1.5rem",
+      fontWeight: 600,
+      fontStyle: "italic",
+      background: C.goldGrad,
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      lineHeight: 1
+    }
+  }, "PainLog"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.58rem",
+      color: C.muted,
+      letterSpacing: "0.08em",
+      textTransform: "uppercase",
+      marginTop: 1
+    }
+  }, "Health Journal"))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      borderLeft: "1px solid ".concat(C.border),
+      paddingLeft: "1.5rem",
+      flex: 1,
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.78rem",
+      color: C.muted,
+      fontStyle: "italic"
+    }
+  }, "\"Every entry brings clarity.\""), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.68rem",
+      color: C.gold,
+      marginTop: 2
+    }
+  }, "Tracking since May 2026")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 12
+    }
+  }, /*#__PURE__*/React.createElement(SaveBadge, null), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: C.card,
+      border: "1px solid ".concat(C.border),
+      borderRadius: 10,
+      padding: "6px 14px",
+      fontSize: "0.78rem",
+      color: C.muted,
+      whiteSpace: "nowrap"
+    }
+  }, "\uD83D\uDCC5 ", fmt(new Date().toISOString(), "short"), " ", new Date().getFullYear())))), isSample && /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: "rgba(201,164,74,0.1)",
+      borderBottom: "1px solid ".concat(C.borderGold),
+      padding: "8px 1.5rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: 900,
+      margin: "0 auto",
+      fontSize: "0.75rem",
+      color: C.gold,
+      display: "flex",
+      alignItems: "center",
+      gap: 6
+    }
+  }, /*#__PURE__*/React.createElement("span", null, "\u2139"), /*#__PURE__*/React.createElement("span", null, "Showing sample data. Any entries you log will be ", /*#__PURE__*/React.createElement("strong", null, "saved automatically"), " and will reload next time you open PainLog."))), /*#__PURE__*/React.createElement(TabNav, {
+    active: screen,
+    setScreen: setScreen
+  }), /*#__PURE__*/React.createElement("main", {
+    style: {
+      flex: 1,
+      padding: "1.5rem",
+      maxWidth: 900,
+      width: "100%",
+      margin: "0 auto",
+      paddingBottom: "3rem"
+    }
+  }, screen === "dashboard" && /*#__PURE__*/React.createElement(Dashboard, {
+    entries: entries,
+    onNavigate: navTo,
+    onLog: goLog,
+    aiInsights: aiInsights,
+    loadingAI: loadingAI,
+    fetchAI: fetchAI
+  }), screen === "log" && /*#__PURE__*/React.createElement(LogEntry, {
+    onSave: saveEntry,
+    onBack: function onBack() {
+      return setScreen("dashboard");
+    },
+    editEntry: editEntry
+  }), screen === "entries" && /*#__PURE__*/React.createElement(EntriesList, {
+    entries: entries,
+    onEdit: editEnt,
+    onDelete: deleteEntry
+  }), screen === "analytics" && /*#__PURE__*/React.createElement(Analytics, {
+    entries: entries
+  }), screen === "reports" && /*#__PURE__*/React.createElement(Reports, {
+    entries: entries
+  }), screen === "settings" && /*#__PURE__*/React.createElement(SettingsScreen, {
+    onClearData: clearData
+  }))));
+}
+
+// ─── MOUNT ────────────────────────────────────────────────────────────────────
+var root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(/*#__PURE__*/React.createElement(App, null));
